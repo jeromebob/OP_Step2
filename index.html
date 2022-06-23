@@ -21,12 +21,12 @@
                 <div>
                     <img src="images/logo/Booki.png" alt="logo_du_site" id="logo">
                 </div>
-                <div>
+                <div id="menu_header">
                     <nav>
                         <ul  id="nav_link">
-                                <li><a href="#heberg">Hébergements</a></li>
+                                <li id="heberg_li"><a href="#heberg">Hébergements</a></li>
                                 <!--lien vers l'élement vers l'id heberg de la page-->
-                                <li><a href="#acti">Activités</a></li>
+                                <li id="acti_li"><a href="#acti">Activités</a></li>
                                 <!--lien vers l'élement vers l'id acti de la page-->
                         </ul>
                     </nav>
@@ -39,22 +39,32 @@
                 <h1>Touvez votre hébergement pour des vacances de rêves</h1>
                 <p>En plein centre ville ou en pleine nature</p>
             </div>
-            <div id="filtres">
-                <i class="fa-solid fa-location-dot"></i>
-                <div id="txt_mars"><input value="Marseille, France"></div>
-                <div id="txt_rech"><p>Rechercher</p></div>
+            <div>
+                <form action="" method="get" class="form_search">
+                    <div>
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="form_search">
+                        <input type="search" value="Marseille, France" required>
+                    </div>
+                    <div class="form_search">
+                        <input type="submit" value="Recherche">
+                    </div>
+                </form>
+            </div>
+            <div class="bouton_filtres">
+                <div>
+                    <span><p>Filtres</p></span>
+                    <span><img src="" alt="icone_economique"><p>Économique</p></span>
+                    <span><img src="" alt="icone_familial"><p>Familial</p></span>
+                    <span><img src="" alt="icone_romantique"><p>Romantique</p></span>
+                    <span><img src="Icone_Animaux" alt=""><p>Animaux autorisés</p></span>
+                </div>
             </div>
             <div>
-                <p>Filtres</p>
-                <img src="" alt="icone_economique"><p>Économique</p>
-                <div><img src="" alt="icone_familial"><p>Familial</p></div>
-                <div><img src="" alt="icone_romantique"><p>Romantique</p></div>
-                <div><img src="Icone_Animaux" alt=""><p>Animaux autorisés</p></div>
+                <span><img src="" alt="icone_info"></span>
+                <span><p>Plus de 500 logments sont disponibles dans cette ville</p></span>
             </div>
-            <span>
-                <img src="" alt="icone_info">
-                <p>Plus de 500 logments sont disponibles dans cette ville</p>
-            </span>
             <div>
                 <div>
                     <h1 id="heberg">Hébergements à Marseille</h1>

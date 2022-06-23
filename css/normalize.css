@@ -24,7 +24,7 @@ li /*CSS des listes*/
 
 #nav_link /*Menu du header*/
 {
-    display: inline-flex;
+    display: inline-flex;/*Disposition en ligne*/
     justify-content: space-around;
     width: 300px;
     vertical-align: center;
@@ -33,6 +33,14 @@ li /*CSS des listes*/
 
 /*MAIN*/
 
+/*formulaire*/
+input[type=search]
+{
+    border: 1px dotted black;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -webkit-appearance: none;
+}
 
 /*CSS des CARDS*/
 .cards {
@@ -54,4 +62,34 @@ li /*CSS des listes*/
     -webkit-border-radius: 8px; /*intensité du border*/
     -webkit-border-radius: 10px 10px; /* intensité rayon verticaux / horizontaux*/
     -webkit-border-radius: 10px 10px 10px 10px; /* intensité des 4 angles (en haut gauche/droite et bas gauche/droite)*/
+}
+
+/*MEDIA SCREEN POUR TABLETTE ET MOBILE*/
+@media screen and (max-width: 760px) {
+
+    #contenaire{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #menu_header{
+        display: flex;
+        justify-items: center;
+        height: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    a li:hover{
+            border-top: 2px solid blue;
+        }
+
+    #heberg_li{
+        display: flex;
+        justify-content: flex-start;
+    }
+    #acti_li{
+        display: flex;
+        justify-content: flex-end;
+    }
+    
 }
