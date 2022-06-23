@@ -98,7 +98,7 @@ a:visited{
         margin-bottom: 10px;
     }
 
-    a li:hover{
+    a li>:hover{
             border-bottom: 2px solid blue;
         }
     
