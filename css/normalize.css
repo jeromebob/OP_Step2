@@ -64,6 +64,23 @@ input[type=search]
     -webkit-border-radius: 10px 10px 10px 10px; /* intensité des 4 angles (en haut gauche/droite et bas gauche/droite)*/
 }
 
+/*LIENS*/
+
+a{
+    color: blue;
+}
+li a:hover{
+    border-top: outset blue 2px;
+}
+
+a :active{
+    color: red;
+}
+
+a:visited{
+    color: blueviolet;
+}
+
 /*MEDIA SCREEN POUR TABLETTE ET MOBILE*/
 @media screen and (max-width: 760px) {
 
@@ -72,6 +89,7 @@ input[type=search]
         flex-wrap: wrap;
         justify-content: center;
     }
+
     #menu_header{
         display: flex;
         justify-items: center;
@@ -79,17 +97,9 @@ input[type=search]
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    a li:hover{
-            border-top: 2px solid blue;
-        }
 
-    #heberg_li{
-        display: flex;
-        justify-content: flex-start;
-    }
-    #acti_li{
-        display: flex;
-        justify-content: flex-end;
-    }
+    li a:hover{
+            border-bottom: outset blue 2px;
+        }
     
 }
