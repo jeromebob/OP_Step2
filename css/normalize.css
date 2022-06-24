@@ -69,8 +69,13 @@ input[type=search]
 a{
     color: blue;
 }
+<<<<<<< HEAD
 a :hover{
     border-top: 2px solid blue;
+=======
+li a:hover{
+    border-top: outset blue 2px;
+>>>>>>> bordure_hover
 }
 
 a :active{
@@ -98,8 +103,13 @@ a:visited{
         margin-bottom: 10px;
     }
 
+<<<<<<< HEAD
     a li>:hover{
             border-bottom: 2px solid blue;
+=======
+    li a:hover{
+            border-bottom: outset blue 2px;
+>>>>>>> bordure_hover
         }
     
 }
