@@ -8,38 +8,122 @@ body
     margin-top: 5px;
     margin-bottom: 5px;
 }
+body :not(header) /*rajout d'un marge sup au body sauf header*/
+{
+    margin-left: 10px;
+}
+/*Listes*/
+li 
+{
+    list-style-type: none; /*Suppression du point*/
+}
+ul
+{
+    padding-left: 0; /*suppression de la marge à gauche*/
+}
+
+/*LIENS*/
+a
+{
+    color: blue;
+}
+
+a[href="#heberg"]:hover, li a[href="#acti"]:hover
+{
+    border-top: outset  #0266fb;
+    padding-top: 28px;
+}
+a :active{
+    color: red;
+}
+
+a:visited{
+    color: blueviolet;
+}
+
 /*HEADER*/
 #contenaire
 {
     display: inline-flex;
     justify-content: space-between;
     width: 98%;
-    height: 150px;
+    height: 100px;
    
 }
-li /*CSS des listes*/
+#logo
 {
-    list-style-type: none; /*Suppression du point*/
+    height: 88px;
+    width: 188px
+}
+#box_nav
+{
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 400px;
+ 
 }
 
 #nav_link /*Menu du header*/
 {
-    display: inline-flex;/*Disposition en ligne*/
-    justify-content: space-around;
-    width: 300px;
-    vertical-align: center;
-    padding: 10px;
+
 }
 
 /*MAIN*/
+#first_section
+{
+   display: inline-flex;
+   justify-content: baseline;
+}
 
 /*formulaire*/
-input[type=search]
+#form_search
 {
-    border: 1px dotted black;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    -webkit-appearance: none;
+display: inline-flex;
+flex: wrap;
+justify-content: space-around;
+}
+#localisation
+{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #f2f2f2;
+    border: 1pt solid #f2f2f2;
+}
+#localisation, #rech, #txt
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+input[type="search"]
+{
+    border-style: none;
+}
+#txt
+{ 
+    border-bottom: #f2f2f2;
+    border-top: #f2f2f2;
+}
+input[type="submit"]/* cible le champ input type envoi*/
+{
+    border-style: none; /*pas de bordure pour le bouton*/
+    background-color: #0063f6;/*couleur identique à la box #rech*/
+}
+#rech
+{
+    background-color: #0063f6;
+    border-top-right-radius: 10px;/*arrondi sup droit*/
+    border-bottom-right-radius: 10px;/*arrondi inf droit*/
+    border-style: none;
+}
+
+/*FILTRES*/
+#bouton_filtres
+{
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: baseline;
 }
 
 /*CSS des CARDS*/
@@ -64,28 +148,6 @@ input[type=search]
     -webkit-border-radius: 10px 10px 10px 10px; /* intensité des 4 angles (en haut gauche/droite et bas gauche/droite)*/
 }
 
-/*LIENS*/
-
-a{
-    color: blue;
-}
-<<<<<<< HEAD
-a :hover{
-    border-top: 2px solid blue;
-=======
-li a:hover{
-    border-top: outset blue 2px;
->>>>>>> bordure_hover
-}
-
-a :active{
-    color: red;
-}
-
-a:visited{
-    color: blueviolet;
-}
-
 /*MEDIA SCREEN POUR TABLETTE ET MOBILE*/
 @media screen and (max-width: 760px) {
 
@@ -103,13 +165,8 @@ a:visited{
         margin-bottom: 10px;
     }
 
-<<<<<<< HEAD
-    a li>:hover{
-            border-bottom: 2px solid blue;
-=======
     li a:hover{
-            border-bottom: outset blue 2px;
->>>>>>> bordure_hover
+            border-bottom: outset blue 5px;
         }
     
 }

@@ -18,53 +18,54 @@
         <!--HEADER-->
         <header>
             <div id="contenaire">
-                <div>
-                    <img src="images/logo/Booki.png" alt="logo_du_site" id="logo">
+                <div id="box_logo">
+                    <img src="images/logo/Booki@3x.png" alt="logo_du_site" id="logo">
                 </div>
-                <div id="menu_header">
-                    <nav>
-                        <ul  id="nav_link">
-                                <li id="heberg_li"><a href="#heberg">Hébergements</a></li>
-                                <!--lien vers l'élement vers l'id heberg de la page-->
-                                <li id="acti_li"><a href="#acti">Activités</a></li>
-                                <!--lien vers l'élement vers l'id acti de la page-->
-                        </ul>
-                    </nav>
+                <div id="box_nav">
+                    <ul  id="nav_link">
+                        <li><div  id="heberg_li"><a href="#heberg">Hébergements</a></div></li>
+                        <!--lien vers l'élement vers l'id heberg de la page-->
+                        <li><div id="acti_li"><a href="#acti">Activités</a></div></li>
+                        <!--lien vers l'élement vers l'id acti de la page-->
+                    </ul>
                 </div>
             </div>
         </header>
         <!--première section de page-->
-        <section>
+        <section class="first_section">
             <div id="present">
                 <h1>Touvez votre hébergement pour des vacances de rêves</h1>
                 <p>En plein centre ville ou en pleine nature</p>
             </div>
-            <div>
-                <form action="" method="get" class="form_search">
-                    <div>
+            <div class="style_form">
+                <form action="" method="get" id="form_search">
+                    <div id="localisation">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
-                    <div class="form_search">
+                    <div id="txt">
                         <input type="search" value="Marseille, France" required>
                     </div>
-                    <div class="form_search">
-                        <input type="submit" value="Recherche">
+                    <div id="rech">
+                        <input type="submit" value="Rechercher">
                     </div>
                 </form>
             </div>
-            <div class="bouton_filtres">
-                <div>
-                    <span><p>Filtres</p></span>
-                    <span><img src="" alt="icone_economique"><p>Économique</p></span>
-                    <span><img src="" alt="icone_familial"><p>Familial</p></span>
-                    <span><img src="" alt="icone_romantique"><p>Romantique</p></span>
-                    <span><img src="Icone_Animaux" alt=""><p>Animaux autorisés</p></span>
-                </div>
-            </div>
             <div>
-                <span><img src="" alt="icone_info"></span>
-                <span><p>Plus de 500 logments sont disponibles dans cette ville</p></span>
+                <ul id="bouton_filtres">
+                    <li><p>Filtres</p></li>
+                    <li><div id="eco"><i class="fa-solid fa-money-bill-wave"></i><p>Économique</p></div></li>
+                    <li><div id="fami"><i class="fa-solid fa-child-reaching"></i><p>Familial</p></div></li>
+                    <li><div id="roman"><i class="fa-solid fa-heart"></i><p>Romantique</p></div></li>
+                    <li><div id="animo"><i class="fa-solid fa-dog"></i><p>Animaux autorisés</p></div></li>
+                </ul>
             </div>
+            <div id="descri">
+                <ul>
+                    <li id="logo_info"><i class="fa-solid fa-info"></i></li>
+                    <li><p>Plus de 500 logments sont disponibles dans cette ville</p></li>
+                </ul>
+            </div>
+        </section>
             <div>
                 <div>
                     <h1 id="heberg">Hébergements à Marseille</h1>
