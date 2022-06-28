@@ -9,9 +9,14 @@ body
     margin-bottom: 5px;
     margin-right: 20px;
 }
-body :not(header) /*rajout d'un marge sup au body sauf header*/
+body :not(header, footer) /*rajout d'un marge sup au body sauf header et footer*/
 {
     margin-left: 10px;
+}
+body>footer
+{
+    margin: 0;
+    padding: 0;
 }
 /*Listes*/
 li 
@@ -53,7 +58,7 @@ padding-bottom: 20px;
 }
 #logo
 {
-    height: 68px;
+    height: 65px;
     width: 108px;
 }
 #box_nav
@@ -70,11 +75,12 @@ padding-bottom: 20px;
 }
 
 
-/*MAIN*/
+/*Première section de page*/
 #first_section
 {
    display: inline-flex;
-   justify-content: baseline;
+   flex-direction: row;
+   flex-wrap: wrap;
 }
 
 /*formulaire*/
@@ -97,6 +103,7 @@ justify-content: space-around;
     padding-right: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-style: outset #f2f2f2 2px;
 }
 input[type="search"]
 {
@@ -120,12 +127,50 @@ input[type="submit"]/* cible le champ input type envoi*/
     border-style: none;
 }
 
-/*FILTRES*/
-#bouton_filtres
+/*BOUTONS FILTRES*/
+
+h5>span
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.bouton_filtres
+{  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    border-style: outset;
+ 
+}
+/*Section Hebergements*/
+#section_heberg /*contenaire se la section heberg*/
 {
     display: inline-flex;
-    justify-content: space-evenly;
-    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#heberg /*box1 (main)*/
+{
+    display: flex;
+    text-decoration: none;
+    background-color: #f2f2f2;
+    box-shadow: 2px 2px 6px;
+    border-radius: 20px;
+    box-sizing: 60%;
+    margin-right: 5px;   
+}
+#aside /*box2 (aside)*/
+{
+    display: flex;
+    text-decoration: none;
+    background-color: #f2f2f2;
+    box-shadow: 2px 2px 6px;
+    border-radius: 20px;
+    box-sizing: 30%;
+    margin-left: 5px;
 }
 
 /*CSS des CARDS*/
@@ -149,7 +194,38 @@ input[type="submit"]/* cible le champ input type envoi*/
     -webkit-border-radius: 10px 10px; /* intensité rayon verticaux / horizontaux*/
     -webkit-border-radius: 10px 10px 10px 10px; /* intensité des 4 angles (en haut gauche/droite et bas gauche/droite)*/
 }
+i .star_quality
+{
+    text-decoration: none;
+    text-decoration-color: #0063f6;
+}
+/*FOOTER*/
+footer
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f2f2f2;
 
+}
+#ul_footer1
+{
+    padding-right: 20px;
+}
+#ul_footer2
+{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#ul_footer3
+{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+footer h2
+{
+    font-weight: bold;
+}
 /*MEDIA SCREEN POUR TABLETTE ET MOBILE*/
 @media screen and (max-width: 760px) {
 
