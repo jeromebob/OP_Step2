@@ -75,12 +75,12 @@ padding-bottom: 20px;
 }
 
 
-/*Première section de page*/
-#first_section
+/*MAIN*/
+main
 {
-   display: inline-flex;
-   flex-direction: row;
-   flex-wrap: wrap;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 /*formulaire*/
@@ -127,52 +127,24 @@ input[type="submit"]/* cible le champ input type envoi*/
     border-style: none;
 }
 
-/*BOUTONS FILTRES*/
-
-h5>span
+/*FILTRES*/
+#ul_filtres
 {
-    display:flex;
-    justify-content: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#ul_info
+{
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
 }
 .bouton_filtres
-{  
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 20px;
-    border-style: outset;
- 
-}
-/*Section Hebergements*/
-#section_heberg /*contenaire se la section heberg*/
-{
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-#heberg /*box1 (main)*/
-{
-    display: flex;
-    text-decoration: none;
-    background-color: #f2f2f2;
-    box-shadow: 2px 2px 6px;
-    border-radius: 20px;
-    box-sizing: 60%;
-    margin-right: 5px;   
-}
-#aside /*box2 (aside)*/
-{
-    display: flex;
-    text-decoration: none;
-    background-color: #f2f2f2;
-    box-shadow: 2px 2px 6px;
-    border-radius: 20px;
-    box-sizing: 30%;
-    margin-left: 5px;
-}
+{ 
+    border-style: outset #f2f2f2;
 
+}
 /*CSS des CARDS*/
 .cards {
     display: grid;/*disposition en grille*/
@@ -190,9 +162,7 @@ h5>span
     object-fit: cover; /*definit remplissage d'un élement*/
     width: 100%;
     height: 100%;
-    -webkit-border-radius: 8px; /*intensité du border*/
-    -webkit-border-radius: 10px 10px; /* intensité rayon verticaux / horizontaux*/
-    -webkit-border-radius: 10px 10px 10px 10px; /* intensité des 4 angles (en haut gauche/droite et bas gauche/droite)*/
+    border-radius: 20px;
 }
 i .star_quality
 {
