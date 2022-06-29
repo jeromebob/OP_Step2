@@ -71,10 +71,11 @@ padding-bottom: 20px;
 
 
 /*MAIN*/
-#first_section
+main
 {
-   display: inline-flex;
-   justify-content: baseline;
+    displey:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 /*formulaire*/
@@ -121,13 +122,23 @@ input[type="submit"]/* cible le champ input type envoi*/
 }
 
 /*FILTRES*/
-#bouton_filtres
+#ul_filtres
 {
-    display: inline-flex;
-    justify-content: space-evenly;
-    align-items: baseline;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
+#ul_info
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.bouton_filtres
+{ 
+    border-style: outset #f2f2f2;
 
+}
 /*CSS des CARDS*/
 .cards {
     display: grid;/*disposition en grille*/
