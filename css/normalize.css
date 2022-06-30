@@ -82,6 +82,19 @@ main
     flex-wrap: wrap;
     justify-content: space-around;
 }
+#section_heberg
+{
+  
+    height: 500px;
+}
+#heberg
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
 
 /*formulaire*/
 #form_search
@@ -155,13 +168,32 @@ input[type="submit"]/* cible le champ input type envoi*/
     /* definit les nombre de lignes et la taille de la ligne pr les colonnes de la grille*/;
     grid-gap/*raccourci pr row-grap & column-gap> definit espace entre lignes & entre colonnes d'1 grille*/: 20px;
 }
-
+.cards
+{
+    align-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+}
+.ul_cards
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 600px;
+    height: 400px;
+    justify-content: space-between;
+}
 .article_cards {
-    display: grid;
-    grid-template-rows/* definit les nombre de lignes et la taille de la ligne*/: max-content 200px 1fr; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 300px;
 }
 
-.article_cards img {
+.article_cards img 
+{
     object-fit: cover; /*definit remplissage d'un élement*/
     width: 100%;
     height: 100%;
