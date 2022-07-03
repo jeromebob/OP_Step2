@@ -1,31 +1,62 @@
 /*MEDIA SCREEN POUR TABLETTE ET MOBILE*/
-@media screen and (max-width: 760px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    #box_nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
 
-    #contenaire{
+    }
+    #box_logo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #nav_links{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+    }
+    a[href="#heberg"]:hover, li a[href="#acti"]:hover{
+        border-bottom: outset  #0266fb;
+        border-top: none;
+        padding-bottom: 20px;
+    }
+    #heberg_li, #acti_li{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    #contenaire_section, #section_form{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
     }
+   
+    #style_form, #ul_info, #present{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    #txt_filtres{
+        width: 100%;
+    }
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+    #ul_footer{
+        
+        text-decoration-style: none;
+        width: 100%;
+    }  
 
-    #menu_header{
-        display: flex;
-        justify-items: center;
-        height: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    
-    a li:hover{
-            border-top: 2px solid blue;
-        }
-
-    #heberg_li{
-        display: flex;
-        justify-content: flex-start;
-    }
-    #acti_li{
-        display: flex;
-        justify-content: flex-end;
-    }
-    
 }

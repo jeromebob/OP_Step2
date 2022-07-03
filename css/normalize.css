@@ -4,19 +4,6 @@ body
     background-color: #ffffff;
     font-family: 'Raleway', 'Times New Roman';
     color: black;
-    margin-left: 20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 20px;
-}
-body :not(header, footer) /*rajout d'un marge sup au body sauf header et footer*/
-{
-    margin-left: 10px;
-}
-body>footer
-{
-    margin: 0;
-    padding: 0;
 }
 /*Listes*/
 li 
@@ -27,7 +14,6 @@ ul
 {
     padding-left: 0; /*suppression de la marge à gauche*/
 }
-
 /*LIENS*/
 a
 {
@@ -46,7 +32,6 @@ a :active{
 a:visited{
     color: blueviolet;
 }
-
 /*HEADER*/
 #contenaire
 {
@@ -73,16 +58,6 @@ padding-bottom: 20px;
     margin-right: 20px;
     margin-left: 20px;
 }
-
-
-/*MAIN*/
-main
-{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
 /*formulaire*/
 #form_search
 {
@@ -145,76 +120,66 @@ input[type="submit"]/* cible le champ input type envoi*/
     border-style: outset #f2f2f2;
 
 }
-/*CSS des CARDS*/
-.cards {
-    display: grid;/*disposition en grille*/
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr))
-    /* definit les nombre de lignes et la taille de la ligne pr les colonnes de la grille*/;
-    grid-gap/*raccourci pr row-grap & column-gap> definit espace entre lignes & entre colonnes d'1 grille*/: 20px;
-}
-
-.article_cards {
-    display: grid;
-    grid-template-rows/* definit les nombre de lignes et la taille de la ligne*/: max-content 200px 1fr; 
-}
-
-.article_cards img {
-    object-fit: cover; /*definit remplissage d'un élement*/
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-}
-i .star_quality
+#ul_filtres p, #ul_filtres span
 {
-    text-decoration: none;
-    text-decoration-color: #0063f6;
-}
-/*FOOTER*/
-footer
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: #f2f2f2;
-
-}
-#ul_footer1
-{
-    padding-right: 20px;
-}
-#ul_footer2
-{
-    padding-left: 20px;
-    padding-right: 20px;
-}
-#ul_footer3
-{
-    padding-left: 20px;
-    padding-right: 20px;
-}
-footer h2
-{
+    font-size: 16px;
     font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-/*MEDIA SCREEN POUR TABLETTE ET MOBILE*/
-@media screen and (max-width: 760px) {
-
-    #contenaire{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #menu_header{
-        display: flex;
-        justify-items: center;
-        height: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    li a:hover{
-            border-bottom: outset blue 5px;
-        }
-    
+#ul_filtres button
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-color: #d7d7d7;
+    border-style: outset;
+    background-color: transparent;
+}
+#ul_filtres button:not()
+#logo_info
+{
+    margin-right: 10px;
+    color: #0063f6;
+}
+#ul_filtres i
+{
+    border-radius: 100px 100px 100px 100px;
+    background-color: #0063f6;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-style: outset;
+    border-color: #0063f6;
+}
+footer{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-left: 10px;
+    width: 100%;
+    height: 300px;
+}
+.ul_footer{
+    display: table-column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.ul_footer a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
