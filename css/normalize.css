@@ -5,7 +5,7 @@ body
     font-family: 'Raleway', 'Times New Roman';
     color: black;
 }
-/*Listes*/
+/*LISTES*/
 li 
 {
     list-style-type: none; /*Suppression du point*/
@@ -58,7 +58,7 @@ padding-bottom: 20px;
     margin-right: 20px;
     margin-left: 20px;
 }
-/*formulaire*/
+/*FORMULAIRE*/
 #form_search
 {
 display: inline-flex;
@@ -142,7 +142,6 @@ input[type="submit"]/* cible le champ input type envoi*/
     border-style: outset;
     background-color: transparent;
 }
-#ul_filtres button:not()
 #logo_info
 {
     margin-right: 10px;
@@ -159,6 +158,79 @@ input[type="submit"]/* cible le champ input type envoi*/
     border-style: outset;
     border-color: #0063f6;
 }
+main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 5px;  
+}
+/*CARTE HEBERGEMENT*/
+#section_heberg{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 60%;
+    height: 600px;
+    background-color: #ececec;
+    border-radius: 20px;
+}
+.ul_h2{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding-left: 10px;
+    margin: 0;
+}
+.ul_h2 a{
+    text-decoration: none;
+    color: black;
+}
+
+.ul_cards{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 20px;
+}
+
+.img_cards_heberg{
+    width: 200px;
+    height: 100px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    align-items: center;
+    vertical-align: top;
+}
+.ul_cards a{
+    text-decoration: none;
+}
+/*ASIDE*/
+#aside{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    width: 20%;
+    height: 600px;
+    background-color: #ececec;
+    border-radius: 20px;
+}
+
+/*FOOTER*/
+
 footer{
     display: flex;
     flex-wrap: nowrap;
