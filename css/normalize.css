@@ -19,7 +19,6 @@ a
 {
     color: blue;
 }
-
 a[href="#heberg"]:hover, li a[href="#acti"]:hover
 {
     border-top: outset  #0266fb;
@@ -32,6 +31,10 @@ a :active{
 a:visited{
     color: blueviolet;
 }
+/*ETOILES*/
+.star_quality .star_black{
+    color: #d9d9d9;
+}
 /*HEADER*/
 #contenaire
 {
@@ -43,8 +46,13 @@ padding-bottom: 20px;
 }
 #logo
 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 65px;
     width: 108px;
+    object-fit: cover;
+    padding-left: 13px;
 }
 #box_nav
 {
@@ -65,43 +73,47 @@ display: inline-flex;
 flex: wrap;
 justify-content: space-around;
 }
-#localisation
+#localisation, #rech, #txt
 {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#localisatio, #rech{
+    border-style: 2px solid #f2f2f2;
+}
+#localisation, #rech, #txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#localisation{
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     background-color: #f2f2f2;
-    border: 1pt solid #f2f2f2;
+    width: 46px;
+    object-fit: cover;
 }
-#localisation, #rech, #txt
-{
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-style: outset #f2f2f2 2px;
-}
-input[type="search"]
-{
+input[type="search"]{
     border-style: none;
 }
-#txt
-{ 
-    border-bottom: #f2f2f2;
-    border-top: #f2f2f2;
-}
-input[type="submit"]/* cible le champ input type envoi*/
-{
+input[type="submit"]/* cible le champ input type envoi*/{
     border-style: none; /*pas de bordure pour le bouton*/
     background-color: #0063f6;/*couleur identique à la box #rech*/
 }
-#rech
-{
+#txt{
+    border-bottom: 2px solid #f2f2f2;
+    border-top: 2px solid #f2f2f2;
+}
+#rech{
+    width: 112px;
     background-color: #0063f6;
     border-top-right-radius: 10px;/*arrondi sup droit*/
     border-bottom-right-radius: 10px;/*arrondi inf droit*/
     border-style: none;
 }
-
 /*FILTRES*/
 #ul_filtres
 {
@@ -163,7 +175,6 @@ input[type="submit"]/* cible le champ input type envoi*/
     flex-wrap: nowrap;
     flex-direction: column;
     width: 100%;
-    height: 300px;
 }
 main{
     padding-left: 20px;
@@ -180,7 +191,6 @@ main{
     flex-wrap: wrap;
     flex-direction: row;
     width: 58%;
-    height: 600px;
     background-color: #ececec;
     border-radius: 20px;
 }
