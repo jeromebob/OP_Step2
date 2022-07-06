@@ -71,52 +71,41 @@ padding-bottom: 20px;
 /*FORMULAIRE*/
 #form_search
 {
-display: inline-flex;
-flex: wrap;
-justify-content: space-around;
+    display: flex;
+    flex: nowrap;
+    justify-content: flex-start;
 }
-#localisation, #rech, #txt
-{
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-#localisatio, #rech{
-    border: 2px solid #f2f2f2;
-}
-#localisation, #rech, #txt{
+#localisation, #txt, #rech, input[type="search"], input[type="submit"]{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 40px;
 }
 #localisation{
+    width: 46px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     background-color: #f2f2f2;
-    width: 46px;
+}
+#localisation:hover, input[type="submit"]:hover{
+    cursor: pointer;
 }
 input[type="search"]{
     border-style: none;
-}
-input[type="search">value="Marseille, France"]{
-    
-}
-input[type="submit"]/* cible le champ input type envoi*/{
-    border-style: none; /*pas de bordure pour le bouton*/
-    background-color: #0063f6;/*couleur identique à la box #rech*/
-}
-#txt{
     border-bottom: 2px solid #f2f2f2;
     border-top: 2px solid #f2f2f2;
+    width: 200px;
+    font-weight: bold;
+    padding-left: 30px;
 }
-#rech{
+input[type="submit"]/* cible le champ input type envoi*/{
+    border: 2px solid #0063f6;
+    background-color: #0063f6;/*couleur identique à la box #rech*/
     width: 112px;
-    background-color: #0063f6;
     border-top-right-radius: 10px;/*arrondi sup droit*/
     border-bottom-right-radius: 10px;/*arrondi inf droit*/
-    border-style: none;
 }
 /*FILTRES*/
 #ul_filtres, #ul_info
