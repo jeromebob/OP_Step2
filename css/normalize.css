@@ -81,15 +81,15 @@ padding-bottom: 20px;
     align-items: center;
     margin: 0;
     padding: 0;
-    height: 40px;
+    height: 45px;
 }
 #localisation{
     width: 46px;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
     background-color: #f2f2f2;
 }
-#localisation:hover, input[type="submit"]:hover{
+#localisation:hover, input[type="submit"]:hover, button:hover{
     cursor: pointer;
 }
 input[type="search"]{
@@ -99,13 +99,17 @@ input[type="search"]{
     width: 200px;
     font-weight: bold;
     padding-left: 30px;
+    font-size: 16px;
 }
 input[type="submit"]/* cible le champ input type envoi*/{
     border: 2px solid #0063f6;
     background-color: #0063f6;/*couleur identique à la box #rech*/
-    width: 112px;
-    border-top-right-radius: 10px;/*arrondi sup droit*/
-    border-bottom-right-radius: 10px;/*arrondi inf droit*/
+    width: 115px;
+    border-top-right-radius: 15px;/*arrondi sup droit*/
+    border-bottom-right-radius: 15px;/*arrondi inf droit*/
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 16px;
 }
 /*FILTRES*/
 #ul_filtres, #ul_info
@@ -118,35 +122,63 @@ input[type="submit"]/* cible le champ input type envoi*/{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
 }
-.bouton_filtres
-{ 
-    border: 2px outset #f2f2f2;
-
+button{
+    padding: 0;
 }
-#ul_filtres p, #ul_filtres span
+.textes_button:not(#filtres)
 {
     font-size: 16px;
     font-weight: bold;
+    padding-left: 8px;
+    padding-right: 8px;
 }
-#ul_filtres button
+#filtres{
+    font-weight: bold;
+    padding-right: 20px;
+    font-size: 14px;
+}
+#ul_filtres li{
+    padding-right: 10px;
+    width: fit-content;
+    height: fit-content;
+}
+button
 {
     border-radius: 20px;
-    border-color: #d7d7d7;
-    border-style: outset;
+    border-style: none;
+    border-top: 2px solid #e7e7e7;
+    border-bottom: 2px solid #e7e7e7;
+    border-right: 2px solid #e7e7e7;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
     background-color: transparent;
+    width: fit-content;
+    height: fit-content;
 }
 #logo_info
 {
     margin-right: 10px;
     color: #0063f6;
 }
-#ul_filtres i
+#ul_filtres i, #ul_info i
 {
     border-radius: 50%;
-    height: 42px;
-    width: 42px;
+    height: 32px;
+    width: 32px;
+    padding: 0;
+    margin: 0;
+}
+#ul_filtres i{
     background-color: #deebff;
+    color: #0266fb;
+}
+#ul_info i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1pt solid #e7e7e7;
 }
 #section_form{
     display: flex;
@@ -154,6 +186,11 @@ input[type="submit"]/* cible le champ input type envoi*/{
     flex-direction: column;
     width: 100%;
 }
+#section_form, #present, #style_form, #ul_filtres, #ul_info{
+    margin-bottom: 10px;
+    padding: 0;
+}
+/*MAIN*/
 main{
     padding-left: 20px;
 }
