@@ -4,6 +4,9 @@ body
     background-color: #ffffff;
     font-family: 'Raleway', 'Times New Roman';
     color: black;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 /*LISTES*/
 li 
@@ -190,37 +193,57 @@ button
     margin-bottom: 10px;
     padding: 0;
 }
-/*MAIN*/
+/*MAIN ET SECTIONS*/
 main{
     padding-left: 20px;
 }
+/*BOX MAIN (HEBERG+ASIDE)*/
 #main_page{
     display: flex;
     justify-content: flex-start;
     flex-wrap: nowrap;
     flex-direction: row;
+    width: 100%;
+    height: fit-content;
 }
+/*HEBERG*/
 #section_heberg{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 58%;
+    width: 70%;
     background-color: #ececec;
     border-radius: 20px;
+    height: fit-content;
 }
+/*ASIDE*/
 #section_aside{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 30%;
+    width: 25%;
+    height: fit-content;
     background-color: #ececec;
     border-radius: 20px;
     margin-left: 40px;
-    padding-left: 10px;
 }
-/*CARTE HEBERGEMENT*/
+/*ACTIVITES*/
+#section_acti{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+/*SECTION HEBERGEMENT*/
+
 .ul_h2{
     display: flex;
     justify-content: flex-start;
@@ -256,7 +279,7 @@ main{
 .ul_cards a:link{
     text-decoration: none;
 }
-.ul_cards .star_quality{
+.star_quality{
     color: #0266fb;
 }
 
@@ -277,38 +300,37 @@ main{
 .text_card{
     color: black;
 }
-/*ASIDE*/
+/*SECTION ASIDE*/
 #aside{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 30%;
+    width: fit-content;
     height: 600px;
     background-color: #ececec;
     border-radius: 20px;
 }
 .img_cards_aside{
-    width: 200px;
-    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 109px;
+    height: 113px;
+    object-fit: cover;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
 }
 .ul_cards_aside{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: nowrap;
     flex-direction: column;
-    width: 450px;
-    height: 150px;
-    background-color: #ffffff;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    width: 300px;
+    height: 120px;
+    margin: 15px;
     padding-left: 3px;
-    padding-right: 3px;
-    border-radius: 20px;
-    margin-left: 2px;
-    margin-right: 2px;
+    background-color: #ffffff;
     box-shadow: 2px 2px 4px #e7e7e7;
     border-radius: 20px;
 }
@@ -318,36 +340,121 @@ main{
     flex-direction: column;
     flex-wrap: wrap;
     margin: 0;
-    padding-left: 10px;
-    padding-bottom: 0;
-    padding-top: 0;
-    padding-right: 10px;
+    padding: 0;
 }
 .article_cards_aside{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
 }
+.ul_cards_aside a{
+    text-decoration: none;
+}
+#ul_h2{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 5px;
+    padding-left: 2px;
+}
+/*SECTION ACTIVITES*/
+#acti{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 400px;
+    width: 100%;
+}
+.cards_acti_HS{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width:260px
+}
+/*Personnalisation des images cartes hautes*/
+.article_cards_HS img, .article_cards_LS img, .article_cards_HLS img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    width: 20%;
+}
+.article_cards_HLS img, .article_cards_LS img{
+    width: 257px;
+}
+.article_cards_HLS img{
+    height: 91px;
+}
+.article_cards_LS img{
+    height: 154px;
+}
+.article_cards_HS img{
+    height: 328px;
+    width: 260px;
+}
+.article_cards_HS, .article_cards_LS, .article_cards_HLS{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: white;
+    box-shadow: 2px 2px 4px black;
+    margin: 0;
+    padding: 2px;
+}
+.margin_10{
+    margin-bottom: 30px;
+}
+/*Hauteur et longueur des cartes Activités*/
+.article_cards_HLS, .article_cards_HS, .article_cards_LS{
+    height: fit-content;
+    width: fit-content;
+}
+/*Suppression soulignage et personnalisation couleur des liens Activités*/
+.link_acti a{
+    text-decoration: none;
+    color: black;
+}
+/*Mise en place du texte*/
+.text_card_acti{
+    width: max-content;
+}
 /*FOOTER*/
-
 footer{
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    margin-left: 10px;
+    margin: 0;
+    padding: 0;
+    background-color: #e7e7e7;
     width: 100%;
-    height: 300px;
+    height: fit-content;
 }
 .ul_footer{
     display: table-column;
     justify-content: center;
     align-items: center;
     width: 30%;
-    margin-right: 50px;
+    margin-right: 30px;
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 20px;
+    padding-left: 20px;
 }
 .ul_footer a{
     display: flex;
