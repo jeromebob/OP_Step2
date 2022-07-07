@@ -1,5 +1,14 @@
 /*MEDIA SCREEN POUR TABLETTE ET MOBILE*/
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {   
+    header, #contenaire{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        margin: 0;
+        padding: 0;
+    }
     #box_nav{
         display: flex;
         justify-content: space-around;
@@ -32,6 +41,7 @@
     }
     #contenaire_section, #section_form{
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
@@ -39,6 +49,7 @@
    
     #style_form, #ul_info, #present{
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
@@ -47,16 +58,51 @@
     #txt_filtres{
         width: 100%;
     }
-    footer{
+    #section_acti{
         display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         flex-wrap: wrap;
-        justify-content: space-around;
+    }
+    footer, #acti, #main_page{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
         width: 100%;
+        height: fit-content;
     }
     #ul_footer{
-        
-        text-decoration-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
         width: 100%;
-    }  
+    }
+    #section_aside{
+        justify-content: center;
+        align-items: center;
+        width: 325px;
+    }
+    #main_page{
+        margin: 0;
+        padding: 0;
+    }
+    .ul_cards_aside{
+        margin: 10px;
+    }
+    #contenaire_section{
+        padding: 0;
+    }
+    #li_h2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
 
 }
