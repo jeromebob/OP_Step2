@@ -1,48 +1,70 @@
 /*MEDIA SCREEN POUR TABLETTE ET MOBILE*/
 @media only screen and (min-width: 320px) and (max-width: 768px) {   
     body{
-        width: 100%;
         display: block;
         justify-content: center;
         align-items: center;
         object-position: center;
     }
-    
-    header, #contenaire{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: fit-content;
+    /*margin: 0/padding: 0*/
+    header, #contenaire, #box_logo,#nav_links, #present, #main_page, #heberg_li, #acti_li, #heberg_li:hover, 
+    #acti_li:hover{
         margin: 0;
         padding: 0;
     }
-    #box_nav{
+    /*  height: fit-content;*/
+    header, #contenaire, footer, #acti, #main_page, .ul_cards_aside{
+        height: fit-content;
+    }
+    /*display: flex/justify-content: flex-start/align-items: center*/
+    #box_nav, #nav_links, #present, #style_form{
         display: flex;
         justify-content: flex-start;
-        flex-direction: row;
         align-items: center;
+    }
+    /*widht: 100%*/
+    #box_nav, header, #contenaire, #box_logo, #style_form, #ul_info, #nav_links, #txt_filtres,
+    footer, #acti, #main_page, #ul_info, #ul_footer, #section_aside, #present{
         width: 100%;
+    }
+    /*Flex-wrap: nowrap*/
+    #box_nav, #nav_links, #style_form, #ul_info, #heberg_li, #acti_li, #heberg_li:hover, 
+    #acti_li:hover, footer, #acti, #main_page, #ul_info, #ul_footer{
         flex-wrap: nowrap;
+    }
+    /*Flex-wrap: wrap*/
+    #style_form, #contenaire_section, #section_form, #ul_filtres, #section_acti, #present{
+        flex-wrap: wrap;
+    }
+    /*display: flex/justify-content: center/align-items: center*/
+    #box_logo, header, #contenaire, #heberg_li, #acti_li, #heberg_li:hover, 
+    #acti_li:hover, #contenaire_section, #section_form, #section_acti, footer, #acti, #main_page, 
+    #section_form, #li_h2, #ul_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*Flex-direction: row*/
+    #ul_info, #box_nav, #nav_links, #section_form{
+        flex-direction: row;
+    }
+    /*flex-direction: column*/
+    #style_form, #contenaire_section, #section_form, #section_acti, footer, #acti, 
+    #main_page, #ul_footer{
+        flex-direction: column;
+    }
+    /*Padding: 0*/
+    #li_h2, #contenaire_section, #style_form, #section_aside{
+        padding: 0; 
     }
     #nav_links{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 100%;
-        margin: 0;
-        padding: 0;
     }
     #box_logo{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        margin: 0;
         margin-bottom: 30px;
     }
-
     .cards_acti_HS{
         margin: 0;
         height: 250px;
@@ -50,84 +72,20 @@
     .cards_acti_HS, .cards_acti_LS, .cards_acti_HLS{
         margin-bottom: 5px;
     }
-    #nav_links{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
     li a[href="#"]:hover, li a[href="#"]:hover{
-        /*border-bottom: 2px solid #0266fb;*/
         border-top: none;
         padding-bottom: 20px;
         /* Une transition pour rendre ça fluide */
         transition: all .3s ease;
     }
     #heberg_li, #acti_li{
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
         width: 189px;
-        margin: 0;
-        padding: 0;
         padding-bottom: 20px;
         border-bottom: 2px solid #f2f2f2;
     }
     #heberg_li:hover, #acti_li:hover{
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
         border-bottom: 2px solid blue;
-        margin: 0;
-        padding: 0;
         transition: all .3s ease;
-    }
-    #contenaire_section, #section_form{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-   
-    #style_form, #ul_info, #present{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    #txt_filtres{
-        width: 100%;
-    }
-    #section_acti{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    footer, #acti, #main_page{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        width: 100%;
-        height: fit-content;
-    }
-    #ul_footer{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        width: 100%;
     }
     #section_heberg{
         width: 325px;
@@ -141,68 +99,43 @@
 
 }
     #section_form{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
         margin-left: 10px;
     }
     #style_form{
-        margin-left: 0;
-        margin-right: 0;
-        padding:0;
         width: fit-content;
     }
     input[type="search"]{
         width: 170px;
         padding-left: 15px;
     }
-    #section_aside{
-        width: 100%;
+    #section_aside, #style_form{
         margin-left: 0;
         margin-right: 0;
+    }
+    #section_aside{
         margin-bottom: 20px;
         border-radius: 0;
-        padding: 0;
         justify-content: center;
         align-items: center;
     }
-    #present{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    #ul_filtres{
-        flex-wrap: wrap;
-    }
     #ul_info{
-        flex-direction: row;
         justify-content: flex-start;
-        flex-wrap: nowrap;
-        width: 100%;
     }
     #main_page{
-        margin: 0;
-        padding: 0;
         flex-direction: column-reverse;
     }
     .ul_cards_aside{
         margin: 10px;
+        width: 330px;
+        padding-top: 3px;
+        padding-bottom: 3px;
     }
-    #contenaire_section{
-        padding: 0;
+    .img_cards_aside{
+        width: 139px;
+        height: 133px;
     }
     #li_h2{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         margin-right: 100px;
-        padding: 0;
     }
 
 }
