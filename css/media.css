@@ -1,5 +1,13 @@
 /*MEDIA SCREEN POUR TABLETTE ET MOBILE*/
 @media only screen and (min-width: 320px) and (max-width: 768px) {   
+    body{
+        width: 100%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        object-position: center;
+    }
+    
     header, #contenaire{
         display: flex;
         justify-content: center;
@@ -150,16 +158,14 @@
         padding-left: 15px;
     }
     #section_aside{
-        width: 325px;
+        width: 100%;
         margin-left: 0;
         margin-right: 0;
         margin-bottom: 20px;
-    }
-    input[type="search"]{
-        width: fit-content;
-        /* Une transition pour rendre ça fluide */
-        transition: all .3s ease;
-        
+        border-radius: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
     }
     #present{
         display: flex;
@@ -193,9 +199,9 @@
     }
     #li_h2{
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
-        margin: 0;
+        margin-right: 100px;
         padding: 0;
     }
 
