@@ -22,12 +22,14 @@ a
 {
     color: blue;
 }
-a[href="#heberg"]:hover, li a[href="#acti"]:hover
-{
+li a[href="#"]:hover, li a[href="#"]:hover{
     border-top: solid 4px  #0266fb;
-    border-spacing: 5px;
-    padding-top: 38px;
-    box-sizing: border-box;
+    transition: 0s linear .05s; /*transition pour l'effet :hover*/
+}
+#herberg_li, #acti_li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 a :active{
     color: red;
@@ -103,6 +105,8 @@ input[type="search"]{
     font-weight: bold;
     padding-left: 30px;
     font-size: 16px;
+    /* Une transition pour le changement d'icone */
+    transition: all .3s ease;
 }
 input[type="submit"]/* cible le champ input type envoi*/{
     border: 2px solid #0063f6;

@@ -11,33 +11,72 @@
     }
     #box_nav{
         display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    #nav_links{
+        display: flex;
         justify-content: space-around;
         align-items: center;
         width: 100%;
-
+        margin: 0;
+        padding: 0;
     }
     #box_logo{
         width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    .cards_acti_HS{
+        margin: 0;
+        height: 250px;
+    }
+    .cards_acti_HS, .cards_acti_LS, .cards_acti_HLS{
+        margin-bottom: 5px;
     }
     #nav_links{
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
-        width: 70%;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
-    a[href="#heberg"]:hover, li a[href="#acti"]:hover{
-        border-bottom: outset  #0266fb;
+    li a[href="#"]:hover, li a[href="#"]:hover{
+        /*border-bottom: 2px solid #0266fb;*/
         border-top: none;
         padding-bottom: 20px;
+        /* Une transition pour rendre ça fluide */
+        transition: all .3s ease;
     }
     #heberg_li, #acti_li{
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: 189px;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #f2f2f2;
+    }
+    #heberg_li:hover, #acti_li:hover{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid blue;
+        margin: 0;
+        padding: 0;
+        transition: all .3s ease;
     }
     #contenaire_section, #section_form{
         display: flex;
@@ -82,14 +121,69 @@
         flex-wrap: nowrap;
         width: 100%;
     }
-    #section_aside{
+    #section_heberg{
+        width: 325px;
+        margin-bottom: 20px;
+        background-color: transparent;
+    }
+.img_cards_heberg{
+
+}
+.article_cards{
+
+}
+    #section_form{
+        display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
+        margin-left: 10px;
+    }
+    #style_form{
+        margin-left: 0;
+        margin-right: 0;
+        padding:0;
+        width: fit-content;
+    }
+    input[type="search"]{
+        width: 170px;
+        padding-left: 15px;
+    }
+    #section_aside{
         width: 325px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    input[type="search"]{
+        width: fit-content;
+        /* Une transition pour rendre ça fluide */
+        transition: all .3s ease;
+        
+    }
+    #present{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #ul_filtres{
+        flex-wrap: wrap;
+    }
+    #ul_info{
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        width: 100%;
     }
     #main_page{
         margin: 0;
         padding: 0;
+        flex-direction: column-reverse;
     }
     .ul_cards_aside{
         margin: 10px;
