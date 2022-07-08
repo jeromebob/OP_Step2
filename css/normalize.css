@@ -92,6 +92,8 @@ padding-bottom: 20px;
     width: 46px;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
     background-color: #f2f2f2;
 }
 #localisation:hover, input[type="submit"]:hover, button:hover{
@@ -107,6 +109,9 @@ input[type="search"]{
     font-size: 16px;
     /* Une transition pour le changement d'icone */
     transition: all .3s ease;
+}
+.loupe_mobile{
+    display: none;
 }
 input[type="submit"]/* cible le champ input type envoi*/{
     border: 2px solid #0063f6;
@@ -145,6 +150,9 @@ button{
     font-weight: bold;
     padding-right: 20px;
     font-size: 14px;
+}
+.loupe{
+    display: none;
 }
 #ul_filtres li{
     padding-right: 10px;
