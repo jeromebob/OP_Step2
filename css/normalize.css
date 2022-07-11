@@ -20,16 +20,32 @@ ul
 /*LIENS*/
 a
 {
-    color: blue;
+    color: black;
+    text-decoration: none;
 }
-li a[href="#"]:hover, li a[href="#"]:hover{
-    border-top: solid 4px  #0266fb;
-    transition: 0s linear .05s; /*transition pour l'effet :hover*/
-}
-#herberg_li, #acti_li{
+li a[href="#heberg"]:hover, li a[href="#acti"]:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: solid 4px  #0266fb;
+    color: #0266fb;
+    padding-top: 60px;
+    width: 215px;
+    transition: 0s linear .05s; /*transition pour l'effet :hover*/
+    position: fixed;/*fixer le deplacement de la bordure bleu(voir avec TD)*/
+    margin: 0;
+}
+#heberg_li, #acti_li{
+    width: 215px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+}
+li a[href="#heberg"], li a[href="#acti"]{
+color: #9c9c9c;
 }
 a :active{
     color: red;
@@ -48,6 +64,7 @@ a:visited{
 display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
+align-items: center;
 padding-top: 20px;
 padding-bottom: 20px;
 }
@@ -63,15 +80,23 @@ padding-bottom: 20px;
 }
 #box_nav
 {
-    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 430px;
+ 
 }
 #nav_links
 {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
-    margin-right: 20px;
-    margin-left: 20px;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
 }
 /*FORMULAIRE*/
 #form_search
@@ -86,15 +111,18 @@ padding-bottom: 20px;
     align-items: center;
     margin: 0;
     padding: 0;
-    height: 45px;
+    height: 68px;
 }
 #localisation{
-    width: 46px;
+    width: 71px;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     background-color: #f2f2f2;
+}
+#localisation i{
+    font-size: 20px;
 }
 #localisation:hover, input[type="submit"]:hover, button:hover{
     cursor: pointer;
@@ -103,7 +131,7 @@ input[type="search"]{
     border-style: none;
     border-bottom: 2px solid #f2f2f2;
     border-top: 2px solid #f2f2f2;
-    width: 200px;
+    width: 312px;
     font-weight: bold;
     padding-left: 30px;
     font-size: 16px;
@@ -116,7 +144,7 @@ input[type="search"]{
 input[type="submit"]/* cible le champ input type envoi*/{
     border: 2px solid #0063f6;
     background-color: #0063f6;/*couleur identique à la box #rech*/
-    width: 115px;
+    width: 179px;
     border-top-right-radius: 15px;/*arrondi sup droit*/
     border-bottom-right-radius: 15px;/*arrondi inf droit*/
     font-weight: bold;
@@ -161,16 +189,22 @@ button{
 }
 button
 {
-    border-radius: 20px;
+    border-radius: 40px;
     border-style: none;
     border-top: 2px solid #e7e7e7;
     border-bottom: 2px solid #e7e7e7;
     border-right: 2px solid #e7e7e7;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
     background-color: transparent;
     width: fit-content;
     height: fit-content;
+}
+/*aggrandissement icone non fopnctionnel voir avec TD*/
+/*.fa-solid{
+    width: 25px;
+    height: 25px;
+    height: fit-content;*/
+    /*Trouvé font awesome> font siez ^_^*/
+  
 }
 #logo_info
 {
@@ -180,10 +214,11 @@ button
 #ul_filtres i, #ul_info i
 {
     border-radius: 50%;
-    height: 32px;
-    width: 32px;
+    height: 50px;
+    width: 50px;
     padding: 0;
     margin: 0;
+    font-size: 20px;
 }
 #ul_filtres i{
     background-color: #deebff;
@@ -224,10 +259,10 @@ main{
     justify-content: space-evenly;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 70%;
+    width: 1170px;
+    height: 833px;
     background-color: #ececec;
     border-radius: 20px;
-    height: fit-content;
 }
 /*ASIDE*/
 #section_aside{
@@ -235,11 +270,11 @@ main{
     justify-content: flex-start;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 25%;
-    height: fit-content;
+    width: 560px;
+    height: 833px;
     background-color: #ececec;
     border-radius: 20px;
-    margin-left: 40px;
+    margin-left: 60px;
 }
 /*ACTIVITES*/
 #section_acti{
@@ -276,13 +311,11 @@ main{
     flex-direction: column;
     align-items: center;
     align-content: center;
-    width: 240px;
-    height: 180px;
+    width: 330px;
+    height: 265px;
     background-color: #ffffff;
     padding-top: 3px;
     padding-bottom: 3px;
-    padding-left: 3px;
-    padding-right: 3px;
     border-radius: 20px;
     margin-left: 2px;
     margin-right: 2px;
@@ -296,8 +329,8 @@ main{
 }
 
 .img_cards_heberg{
-    width: 238px;
-    height: 100px;
+    width: 320px;
+    height: 150px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     align-items: center;
@@ -316,10 +349,10 @@ main{
 #aside{
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
-    width: fit-content;
-    height: 600px;
+    width: 560px;
+    height: 833px;
     background-color: #ececec;
     border-radius: 20px;
 }
@@ -327,8 +360,8 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 109px;
-    height: 113px;
+    width: 171px;
+    height: 179px;
     object-fit: cover;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
@@ -338,10 +371,12 @@ main{
     justify-content: center;
     flex-wrap: nowrap;
     flex-direction: column;
-    width: 300px;
-    height: 120px;
-    margin: 15px;
-    padding-left: 4px;
+    width: 460px;
+    height: 191px;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    margin-left: 52px;
+    padding-left: 6px;
     background-color: #ffffff;
     box-shadow: 2px 2px 4px #e7e7e7;
     border-radius: 20px;
@@ -349,10 +384,14 @@ main{
 .text_card_aside{
     display: flex;
     justify-content: flex-start;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 0;
+    margin-left: 30px;
+    width: 190px;
+    height: 179px;
 }
 .article_cards_aside{
     display: flex;
@@ -360,6 +399,9 @@ main{
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+}
+.star_aside{
+    margin-top: 35px;
 }
 .ul_cards_aside a{
     text-decoration: none;
@@ -374,24 +416,27 @@ main{
     padding-left: 2px;
 }
 /*SECTION ACTIVITES*/
-#acti{
+#acti {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    margin-left: 5px;
-    margin-right: 5px;
-    height: 400px;
-    width: 100%;
+    width: 1820px;
+    height: 565px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    padding: 0;
 }
 .cards_acti_HS{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    width:260px
+    width: 408px;
+    margin: 0;
+    padding: 0;
 }
 /*Personnalisation des images cartes hautes*/
 .article_cards_HS img, .article_cards_LS img, .article_cards_HLS img{
@@ -403,20 +448,18 @@ main{
     margin: 0;
     padding: 0;
     object-fit: cover;
-    width: 20%;
 }
-.article_cards_HLS img, .article_cards_LS img{
-    width: 257px;
+.article_cards_HLS img, .article_cards_LS img, .article_cards_HS img{
+    width: 400px;
 }
 .article_cards_HLS img{
-    height: 91px;
+    height: 146px;
 }
 .article_cards_LS img{
-    height: 154px;
+    height: 238px;
 }
 .article_cards_HS img{
-    height: 328px;
-    width: 260px;
+    height: 517px;
 }
 .article_cards_HS, .article_cards_LS, .article_cards_HLS{
     display: flex;
@@ -430,9 +473,10 @@ main{
     margin: 0;
     padding: 2px;
 }
+/*Margin de 30px pour l'esapce entre les cartes petites et moyennes
 .margin_10{
     margin-bottom: 30px;
-}
+}*/
 /*Hauteur et longueur des cartes Activités*/
 .article_cards_HLS, .article_cards_HS, .article_cards_LS{
     height: fit-content;

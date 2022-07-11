@@ -6,25 +6,47 @@
         align-items: center;
         object-position: center;
     }
+        /*CSS HEADER*/
+        header{
+            height: fit-content;
+        }
+        #box_nav, header, #nav_links{
+            width: 100%;
+        }
+        #box_nav, header, #box_logo{
+            margin: 0;
+            padding: 0;
+        }
+        #nav_links{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        #box_nav, #nav_links{
+            flex-direction: row;
+        }
     /*margin: 0/padding: 0*/
-    header, #contenaire, #box_logo,#nav_links, #present, #main_page, #heberg_li, #acti_li, #heberg_li:hover, 
-    #acti_li:hover{
+    #contenaire, #present, #main_page, #heberg_li, #acti_li, #heberg_li:hover, 
+    #acti_li:hover, #style_form, #section_form{
         margin: 0;
         padding: 0;
     }
     /*  height: fit-content;*/
-    header, #contenaire, footer, #acti, #main_page, .ul_cards_aside{
+    #contenaire, #acti, #main_page, .ul_cards_aside{
         height: fit-content;
     }
-    /*display: flex/justify-content: flex-start/align-items: center*/
-    #box_nav, #nav_links, #present, #style_form{
+    /*CSS FORMULAIRE*/
+    #style_form, #ul_info, #txt_filtres, #present{
+        width: 100%;
+    }
+    #present, #style_form{
         display: flex;
         justify-content: flex-start;
         align-items: center;
     }
     /*widht: 100%*/
-    #box_nav, header, #contenaire, #box_logo, #style_form, #ul_info, #nav_links, #txt_filtres,
-    footer, #acti, #main_page, #ul_info, #ul_footer, #section_aside, #present{
+    #contenaire, #box_logo,
+    #acti, #main_page, , #section_aside, {
         width: 100%;
     }
     /*Flex-wrap: nowrap*/
@@ -45,7 +67,7 @@
         align-items: center;
     }
     /*Flex-direction: row*/
-    #ul_info, #box_nav, #nav_links, #section_form{
+    #ul_info, #section_form{
         flex-direction: row;
     }
     /*flex-direction: column*/
@@ -72,6 +94,45 @@
     .cards_acti_HS, .cards_acti_LS, .cards_acti_HLS{
         margin-bottom: 5px;
     }
+    /*Css magnificient glass search"*/
+    input[value="Rechercher"]{
+        display: none;
+    }
+    button[type="submit"]{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: blue;
+        color: white;
+        width: 92px;
+        height: 45px;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 15px;/*arrondi sup droit*/
+        border-bottom-right-radius: 15px;/*arrondi inf droit*/
+        border: 2px solid blue;
+    }
+    #section_form{
+        margin-left: 10px;
+    }
+    #style_form{
+        width: fit-content;
+    }
+    input[type="search"]{
+        width: 170px;
+        padding-left: 15px;
+    }
+    #section_aside, #style_form{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    /*CSS DU MAIN_PAGE (HEBERG ET ASIDE)*/
+    #main_page{
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 0;
+    }
+    /*HEBERG*/
     li a[href="#"]:hover, li a[href="#"]:hover{
         border-top: none;
         padding-bottom: 20px;
@@ -92,26 +153,15 @@
         margin-bottom: 20px;
         background-color: transparent;
     }
-.img_cards_heberg{
+        /*.img_cards_heberg{
 
-}
-.article_cards{
+    }
+        .article_cards{
 
-}
-    #section_form{
-        margin-left: 10px;
-    }
-    #style_form{
-        width: fit-content;
-    }
-    input[type="search"]{
-        width: 170px;
-        padding-left: 15px;
-    }
-    #section_aside, #style_form{
-        margin-left: 0;
-        margin-right: 0;
-    }
+    }*/
+    
+    /*ASIDE*/
+
     #section_aside{
         margin-bottom: 20px;
         border-radius: 0;
@@ -121,9 +171,7 @@
     #ul_info{
         justify-content: flex-start;
     }
-    #main_page{
-        flex-direction: column-reverse;
-    }
+  
     .ul_cards_aside{
         margin: 10px;
         width: 330px;
@@ -136,6 +184,16 @@
     }
     #li_h2{
         margin-right: 100px;
+    }
+    /*CSS DES CARTES ACTIVITES*/
+
+    /*CSS DU FOOTER*/
+
+    footer{
+        height: fit-content;
+    }
+    #ul_footer, footer{
+        width: 100%;
     }
 
 }
