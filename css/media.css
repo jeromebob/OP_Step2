@@ -1,199 +1,236 @@
 /*MEDIA SCREEN POUR TABLETTE ET MOBILE*/
 @media only screen and (min-width: 320px) and (max-width: 768px) {   
     body{
+        width: 100%;
         display: block;
         justify-content: center;
         align-items: center;
         object-position: center;
     }
-        /*CSS HEADER*/
-        header{
-            height: fit-content;
-        }
-        #box_nav, header, #nav_links{
-            width: 100%;
-        }
-        #box_nav, header, #box_logo{
-            margin: 0;
-            padding: 0;
-        }
-        #nav_links{
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-        }
-        #box_nav, #nav_links{
-            flex-direction: row;
-        }
-    /*margin: 0/padding: 0*/
-    #contenaire, #present, #main_page, #heberg_li, #acti_li, #heberg_li:hover, 
-    #acti_li:hover, #style_form, #section_form{
-        margin: 0;
-        padding: 0;
-    }
-    /*  height: fit-content;*/
-    #contenaire, #acti, #main_page, .ul_cards_aside{
-        height: fit-content;
-    }
-    /*CSS FORMULAIRE*/
-    #style_form, #ul_info, #txt_filtres, #present{
-        width: 100%;
-    }
-    #present, #style_form{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    /*widht: 100%*/
-    #contenaire, #box_logo,
-    #acti, #main_page, , #section_aside, {
-        width: 100%;
-    }
-    /*Flex-wrap: nowrap*/
-    #box_nav, #nav_links, #style_form, #ul_info, #heberg_li, #acti_li, #heberg_li:hover, 
-    #acti_li:hover, footer, #acti, #main_page, #ul_info, #ul_footer{
-        flex-wrap: nowrap;
-    }
-    /*Flex-wrap: wrap*/
-    #style_form, #contenaire_section, #section_form, #ul_filtres, #section_acti, #present{
-        flex-wrap: wrap;
-    }
-    /*display: flex/justify-content: center/align-items: center*/
-    #box_logo, header, #contenaire, #heberg_li, #acti_li, #heberg_li:hover, 
-    #acti_li:hover, #contenaire_section, #section_form, #section_acti, footer, #acti, #main_page, 
-    #section_form, #li_h2, #ul_footer{
+    header, #contenaire{
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        height: fit-content;
+        margin: 0;
+        padding: 0;
     }
-    /*Flex-direction: row*/
-    #ul_info, #section_form{
+    #box_nav{
+        display: flex;
+        justify-content: flex-start;
         flex-direction: row;
-    }
-    /*flex-direction: column*/
-    #style_form, #contenaire_section, #section_form, #section_acti, footer, #acti, 
-    #main_page, #ul_footer{
-        flex-direction: column;
-    }
-    /*Padding: 0*/
-    #li_h2, #contenaire_section, #style_form, #section_aside{
-        padding: 0; 
+        align-items: center;
+        width: 100%;
+        flex-wrap: nowrap;
     }
     #nav_links{
         display: flex;
         justify-content: space-around;
         align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
     #box_logo{
-        margin-bottom: 30px;
-    }
-    .cards_acti_HS{
-        margin: 0;
-        height: 250px;
-    }
-    .cards_acti_HS, .cards_acti_LS, .cards_acti_HLS{
-        margin-bottom: 5px;
-    }
-    /*Css magnificient glass search"*/
-    input[value="Rechercher"]{
-        display: none;
-    }
-    button[type="submit"]{
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: blue;
-        color: white;
-        width: 92px;
-        height: 45px;
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0;
-        border-top-right-radius: 15px;/*arrondi sup droit*/
-        border-bottom-right-radius: 15px;/*arrondi inf droit*/
-        border: 2px solid blue;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 30px;
     }
+    #nav_links{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        border-top: none;
+    }
+    /*Liens*/
+    #heberg_li, #acti_li{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        border-top: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #f2f2f2;
+    }
+    li a[href="#heberg"], li a[href="#acti"]{
+        color: black;
+        text-decoration: none;
+    }
+    /*HOOVER*/
+    li a[href="#heberg"]:hover, li a[href="#acti"]:hover{
+        /*border-bottom: 2px solid #0266fb;*/
+        padding-bottom: 20px;
+        color: blue;
+        /* Une transition pour rendre ça fluide */
+        transition: all .3s ease;
+        border-top: transparent;
+    }
+    #heberg_li:hover, #acti_li:hover{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid blue;
+        margin: 0;
+        padding: 0;
+        transition: all .3s ease;
+        border-top: transparent;
+    }
+    /*FORMULAIRES LOCALISATION*/
+    #contenaire_section, #section_form{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    #style_form, #ul_info, #present{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    #txt_filtres{
+        width: 100%;
+    }
+    #section_heberg{
+        width: 325px;
+        height: fit-content;
+        margin-bottom: 20px;
+        background-color: transparent;
+    }
+.img_cards_heberg{
+
+}
+.article_cards{
+
+}
     #section_form{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         margin-left: 10px;
     }
     #style_form{
+        margin-left: 0;
+        margin-right: 0;
+        padding:0;
         width: fit-content;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
     input[type="search"]{
         width: 170px;
         padding-left: 15px;
     }
-    #section_aside, #style_form{
-        margin-left: 0;
-        margin-right: 0;
-    }
-    /*CSS DU MAIN_PAGE (HEBERG ET ASIDE)*/
-    #main_page{
-        flex-direction: column-reverse;
+    #present{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
         margin: 0;
         padding: 0;
     }
-    /*HEBERG*/
-    li a[href="#"]:hover, li a[href="#"]:hover{
-        border-top: none;
-        padding-bottom: 20px;
-        /* Une transition pour rendre ça fluide */
-        transition: all .3s ease;
-    }
-    #heberg_li, #acti_li{
-        width: 189px;
-        padding-bottom: 20px;
-        border-bottom: 2px solid #f2f2f2;
-    }
-    #heberg_li:hover, #acti_li:hover{
-        border-bottom: 2px solid blue;
-        transition: all .3s ease;
-    }
-    #section_heberg{
-        width: 325px;
-        margin-bottom: 20px;
-        background-color: transparent;
-    }
-        /*.img_cards_heberg{
-
-    }
-        .article_cards{
-
-    }*/
-    
-    /*ASIDE*/
-
-    #section_aside{
-        margin-bottom: 20px;
-        border-radius: 0;
-        justify-content: center;
-        align-items: center;
+    #ul_filtres{
+        flex-wrap: wrap;
     }
     #ul_info{
+        flex-direction: row;
         justify-content: flex-start;
-    }
-  
-    .ul_cards_aside{
-        margin: 10px;
-        width: 330px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-    }
-    .img_cards_aside{
-        width: 139px;
-        height: 133px;
-    }
-    #li_h2{
-        margin-right: 100px;
-    }
-    /*CSS DES CARTES ACTIVITES*/
-
-    /*CSS DU FOOTER*/
-
-    footer{
-        height: fit-content;
-    }
-    #ul_footer, footer{
+        flex-wrap: nowrap;
         width: 100%;
     }
+    #main_page{
+        margin: 0;
+        padding: 0;
+        flex-direction: column-reverse;
+    }
+    #contenaire_section{
+        padding: 0;
+    }
+    #li_h2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 100px;
+        padding: 0;
+    }
+        /*ASIDE*/
+        #section_aside{
+            width: fit-content;
+            height: fit-content;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 20px;
+            border-radius: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+        }
+        .img_cards_aside{
+            width: 255px;
+            height: 269px;
+            object-fit: cover;
+        }
+    
+        .ul_cards_aside{
+            width: 668px;
+            height: 279px;
+        }
+        /*Activités*/
+        #section_acti{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .cards_acti_HS{
+            margin: 0;
+            height: 250px;
+        }
+        .cards_acti_HS, .cards_acti_LS, .cards_acti_HLS{
+            margin-bottom: 5px;
+        }
+        /*FOOTER*/
+        footer, #acti, #main_page{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 100%;
+            height: fit-content;
+        }
+        #ul_footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
 
 }
+

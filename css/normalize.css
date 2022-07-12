@@ -29,10 +29,11 @@ li a[href="#heberg"]:hover, li a[href="#acti"]:hover{
     align-items: center;
     border-top: solid 4px  #0266fb;
     color: #0266fb;
-    padding-top: 60px;
     width: 215px;
-    transition: 0s linear .05s; /*transition pour l'effet :hover*/
-    position: fixed;/*fixer le deplacement de la bordure bleu(voir avec TD)*/
+    height: 120px;
+    /* Une transition pour rendre ça fluide */
+    transition: all .3s ease;
+    /*position: fixed;_fixer le deplacement de la bordure bleu(voir avec TD)*/
     margin: 0;
 }
 #heberg_li, #acti_li{
@@ -40,12 +41,12 @@ li a[href="#heberg"]:hover, li a[href="#acti"]:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20px;
+    height: 77px;
     margin: 0;
     padding: 0;
 }
 li a[href="#heberg"], li a[href="#acti"]{
-color: #9c9c9c;
+    color: #9c9c9c;
 }
 a :active{
     color: red;
