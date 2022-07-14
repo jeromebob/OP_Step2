@@ -1,64 +1,55 @@
 /*MEDIA SCREEN POUR TABLETTE ET MOBILE*/
-@media only screen and (min-width: 320px) and (max-width: 768px) {   
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    /*Dimensions du body*/
     body{
         width: 100%;
-        display: block;
-        justify-content: center;
-        align-items: center;
-        object-position: center;
+        min-width: 320px;
+        max-width: 768px;
     }
+    /*HEADER*/
     header, #contenaire{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: fit-content;
-        margin: 0;
-        padding: 0;
-    }
-    #box_nav{
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
+        flex-direction: column;
         flex-wrap: nowrap;
-    }
-    #nav_links{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
         width: 100%;
+        min-width: 320px;
+        max-width: 768px;
+        min-height: fit-content;
+        max-height: max-content;
         margin: 0;
         padding: 0;
     }
-    #box_logo{
-        width: 100%;
+    #box_logo, #box_nav{
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0;
-        margin: 0;
-        margin-bottom: 30px;
+        width: 100%;
+        min-height: 320px;
+        max-width: 768px;
+        min-height: fit-content;
+        max-height: min-content;
     }
     #nav_links{
         display: flex;
-        justify-content: flex-start;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
         width: 100%;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        margin-bottom: 20px;
-        margin-top: 20px;
-        border-top: none;
+        min-width: 320px;
+        max-width: 768px;
     }
-    /*Liens*/
+    /*LINKS*/
     #heberg_li, #acti_li{
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
-        width: 250px;
+        width: 100%;
+        min-width: 160px;
+        max-width: 384px;
         border-top: 0;
         margin: 0;
         padding: 0;
@@ -90,6 +81,13 @@
         transition: all .3s ease;
         border-top: transparent;
     }
+    /*Dimension des contenaires du main*/
+    #main_page, #contenaire_section, #section_aside, 
+    #style_form, #ul_info, #present{
+        width: 100%;
+        min-width: 320px;
+        max-width: 768px;
+    }
     /*FORMULAIRES LOCALISATION*/
     #contenaire_section, #section_form{
         display: flex;
@@ -104,13 +102,8 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        width: 100%;
-    }
-    #txt_filtres{
-        width: 100%;
     }
     #section_heberg{
-        width: 325px;
         height: fit-content;
         margin-bottom: 20px;
         background-color: transparent;
@@ -138,8 +131,21 @@
         align-items: center;
     }
     input[type="search"]{
-        width: 170px;
+        width: 100%;
+        min-width: 307;
+        max-width: 460px;
         padding-left: 15px;
+    }
+    input[value="rechercher"]{
+        display: none;
+    }
+    button #loupe_mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-width: 68px;
+        max-width: 90px;
     }
     #present{
         display: flex;
@@ -177,25 +183,30 @@
     }
         /*ASIDE*/
         #section_aside{
-            width: fit-content;
-            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             margin-left: 0;
             margin-right: 0;
             margin-bottom: 20px;
             border-radius: 0;
             padding: 0;
-            justify-content: center;
-            align-items: center;
+            border: 0;
         }
         .img_cards_aside{
-            width: 255px;
-            height: 269px;
+        
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
             object-fit: cover;
         }
     
         .ul_cards_aside{
-            width: 668px;
-            height: 279px;
+            width: 100%;
+            min-width: none;
+            max-width: 653px;
+            min-height: none;
+            max-height: 400px;
         }
         /*Activités*/
         #section_acti{
@@ -205,6 +216,7 @@
             flex-direction: column;
             flex-wrap: wrap;
             width: 100%;
+            
         }
         .cards_acti_HS{
             margin: 0;
@@ -214,7 +226,7 @@
             margin-bottom: 5px;
         }
         /*FOOTER*/
-        footer, #acti, #main_page{
+        footer, #acti{
             display: flex;
             justify-content: center;
             align-items: center;

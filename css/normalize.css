@@ -27,7 +27,7 @@ li a[href="#heberg"]:hover, li a[href="#acti"]:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: solid 4px  #0266fb;
+    border-top: 3px solid  #0266fb;
     color: #0266fb;
     width: 215px;
     height: 120px;
@@ -58,6 +58,9 @@ a:visited{
 /*ETOILES*/
 .star_quality .star_black{
     color: #d9d9d9;
+}
+.star_quality{
+    margin-top: 15px;
 }
 /*HEADER*/
 #contenaire
@@ -103,7 +106,7 @@ padding-bottom: 20px;
 #form_search
 {
     display: flex;
-    flex: nowrap;
+    flex-wrap: nowrap;
     justify-content: flex-start;
 }
 #localisation, #txt, #rech, input[type="search"], input[type="submit"]{
@@ -165,6 +168,9 @@ input[type="submit"]/* cible le champ input type envoi*/{
     align-items: center;
     flex-wrap: nowrap;
 }
+#ul_filtres button:hover{
+    color: #0266fb;
+}
 button{
     padding: 0;
 }
@@ -204,7 +210,7 @@ button
     width: 25px;
     height: 25px;
     height: fit-content;*/
-    /*Trouvé font awesome> font siez ^_^*/
+    /*Trouvé font awesome> font size ^_^*/
   
 }
 #logo_info
@@ -345,6 +351,7 @@ main{
 }
 .text_card{
     color: black;
+    font-size: 14px;
 }
 /*SECTION ASIDE*/
 #aside{
