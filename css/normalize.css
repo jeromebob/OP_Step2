@@ -87,7 +87,7 @@ h1 {
     /*Transition longue avec l'effet ease-in-out (accèlere puis ralentit)*/
     transition: all .30000s ease-in-out;
 }
-#logo:hover{
+#logo:hover{/*pour le fun: a supprimer*/
     transform: rotate(360deg); /*Rotation 360°*/
     background-color: #e7e7e7;
     /*Border radius 50% avec proportions non égales donc elipse ^_^*/
@@ -331,6 +331,7 @@ main{
     min-height: 430px;
     max-height: 1886px;
 }
+/*Propriétés communes heberg/aside*/
 #section_heberg, #section_aside{
     display: flex;
     flex-wrap: wrap;
@@ -347,10 +348,13 @@ main{
 }
 /*ASIDE*/
 #section_aside{
-    justify-content: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    flex-wrap: nowrap;
     min-width: 290px;
-    max-width: 30vw;
+    max-width: 40vw;
     margin-left: 5vw;
 }
 /*ACTIVITES*/
@@ -371,10 +375,10 @@ main{
 .ul_h2{
     display: flex;
     justify-content: flex-start;
-    flex-wrap: nowrap;
+    align-items: center;
     width: 100%;
     padding-left: 10px;
-    margin: 0;
+    margin-top: -5px;
 }
 .ul_h2 a{
     text-decoration: none;
@@ -464,11 +468,8 @@ main{
     justify-content: center;
     flex-wrap: nowrap;
     flex-direction: column;
-    width: 460px;
+    width: fit-content;
     height: 191px;
-    margin-top: 21px;
-    margin-bottom: 21px;
-    margin-left: 52px;
     padding-left: 6px;
     background-color: #ffffff;
     box-shadow: 2px 2px 4px #e7e7e7;
@@ -613,6 +614,7 @@ footer{
     align-items: center;
     width: 30%;
     margin-right: 30px;
+    margin-left: 3px;
     padding-top: 5px;
     padding-bottom: 20px;
     padding-left: 20px;

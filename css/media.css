@@ -29,8 +29,10 @@
         width: 100%;
         min-width: 320px;
         max-width: 768px;
-        min-height: fit-content;
-        max-height: min-content;
+        min-height: 130px;
+    }
+    #box_logo:hover{
+        margin:0;
     }
     #box_nav{
         width: 100%;
@@ -43,7 +45,7 @@
         min-width: 160px;
         max-width: 384px;
     }
-    /*LINKS*/
+    /*LINKS HEADER*/
     #heberg_li, #acti_li{
         flex-direction: row;
         flex-wrap: nowrap;
@@ -58,7 +60,7 @@
         color: black;
         text-decoration: none;
     }
-    /*HOOVER*/
+    /*HOVER LINKS HEADER*/
     li a[href="#heberg"]:hover, li a[href="#acti"]:hover{
         width: 100%;
         min-width: 160px;
@@ -104,17 +106,6 @@
         justify-content: center;
         align-items: center;
     }
-    #section_heberg{
-        height: fit-content;
-        margin-bottom: 20px;
-        background-color: transparent;
-    }
-.img_cards_heberg{
-
-}
-.article_cards{
-
-} 
     #section_form{
         display: flex;
         flex-direction: row;
@@ -199,10 +190,23 @@
         flex-wrap: nowrap;
         width: 100%;
     }
+    /*MAIN PAGE (HEBERG+ASIDE)*/
     #main_page{
         margin: 0;
         padding: 0;
         flex-direction: column-reverse;
+    }
+    /*SECTION HEBERGEMENTS*/
+    #section_heberg
+    {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: min-content;
+        height: fit-content;
+        margin-bottom: 20px;
+        background-color: transparent;
     }
     #contenaire_section{
         padding: 0;
@@ -214,32 +218,30 @@
         margin-right: 100px;
         padding: 0;
     }
-        /*ASIDE*/
-        #section_aside{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-left: 0;
-            margin-right: 0;
-            margin-bottom: 20px;
-            border-radius: 0;
-            padding: 0;
-            border: 0;
-        }
-        .img_cards_aside{
-        
-            border-bottom-left-radius: 20px;
-            border-top-left-radius: 20px;
-            object-fit: cover;
-        }
-    
-        .ul_cards_aside{
-            width: 100%;
-            min-width: none;
-            max-width: 653px;
-            min-height: none;
-            max-height: 400px;
+    /*ASIDE*/
+    #section_aside{
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+        border-radius: 0;
+        padding: 0;
+        border: 0;
+    }
+    .img_cards_aside{
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        object-fit: cover;
+    }
+    .ul_cards_aside{
+        max-width: 653px;
+        min-height: fit-content;
+        max-height: 400px;
+    }
+        .ul_cards_aside:hover{
+            box-shadow: none;
+            transform: none;
         }
         /*Activités*/
         #section_acti{
@@ -270,12 +272,9 @@
         }
         #ul_footer{
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
             flex-wrap: nowrap;
             width: 100%;
         }
-
 }
 
