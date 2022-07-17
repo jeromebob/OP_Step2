@@ -8,79 +8,94 @@ body
     padding: 0;
     border: 0;
 }
-/*LISTES*/
-li 
-{
-    list-style-type: none; /*Suppression du point*/
+/*DIMENSIONS 992_NONE*/
+body, #contenaire{
+    width: 100%;
+    min-width: 992px;
+    max-width: fit-content;
 }
-ul
+/*LISTES*/
+li /*Suppression du point pour les balises LI*/
 {
-    padding-left: 0; /*suppression de la marge à gauche*/
+    list-style-type: none; 
+}
+ul /*suppression de la marge à gauche pour les balises UL*/
+{
+    padding-left: 0;
 }
 /*LIENS*/
-a
+a /*Tous les liens en couleur noire et sans souslignage*/
 {
     color: black;
     text-decoration: none;
 }
-li a[href="#heberg"]:hover, li a[href="#acti"]:hover{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 3px solid  #0266fb;
-    color: #0266fb;
-    width: 215px;
-    height: 120px;
-    /* Une transition pour rendre ça fluide */
-    transition: all .3s ease;
-    /*position: fixed;_fixer le deplacement de la bordure bleu(voir avec TD)*/
-    margin: 0;
-}
-#heberg_li, #acti_li{
-    width: 215px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 77px;
-    margin: 0;
-    padding: 0;
-}
-li a[href="#heberg"], li a[href="#acti"]{
-    color: #9c9c9c;
-}
-a :active{
+a :active/*Couleur rouge à l'activation*/
+{
     color: red;
 }
 
-a:visited{
+a:visited/*couleur violet pour les liens visités*/
+{
     color: blueviolet;
 }
-/*ETOILES*/
-.star_quality .star_black{
+/*ETOILES (Couleur grisatre pour les étoiles de la seconde class="star_black")*/
+.star_quality .star_black
+{
     color: #d9d9d9;
 }
-.star_quality{
+.star_quality /*Marge supérieur*/
+{
     margin-top: 15px;
 }
+/*Taille responsive des polices
+h1 {
+    font-size: 4vw;  ici 4% de la largeur de mon écran (viewport widht)
+} (a voir si garder)*/
+
 /*HEADER*/
+#contenaire, #box_logo, #logo, #box_nav,
+#heberg_li, #acti_li{
+    margin: 0;
+    padding: 0;
+}
 #contenaire
 {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-align-items: center;
-padding-top: 20px;
-padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-width: 992px;
+    max-width: none;
+    height: 100%;
+    min-height: 50px;
+    max-height: 100px;
+    border: 0;
+    margin-right: 0;
 }
 #logo
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 65px;
-    width: 108px;
+    width: 100%;
+    min-width: 41px;
+    max-width: 200px;
     object-fit: cover;
     padding-left: 13px;
+    /*Transition longue avec l'effet ease-in-out (accèlere puis ralentit)*/
+    transition: all .30000s ease-in-out;
+}
+#logo:hover{
+    transform: rotate(360deg); /*Rotation 360°*/
+    background-color: #e7e7e7;
+    /*Border radius 50% avec proportions non égales donc elipse ^_^*/
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px #0266fb;
+    /*Marge sup et G*/
+    margin-top: 10px;
+    margin-left: 10px;
 }
 #box_nav
 {
@@ -89,8 +104,39 @@ padding-bottom: 20px;
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 430px;
- 
+    width: 100%;
+    min-width: 230px;
+    max-width: fit-content;
+}
+#heberg_li, #acti_li{
+    width: 215px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    font-size-adjust: inherit;
+}
+/*HOOVER DU MENU NAV*/
+li a[href="#heberg"]:hover, li a[href="#acti"]:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-top: 3px solid  #0266fb;
+    color: #0266fb;
+    width: 100%;
+    min-width: 215px;
+    height: 100%;
+    min-height: 100px;
+    /* Une transition pour rendre ça fluide */
+    transition: all .3s ease;
+    /*position: fixed;_fixer le deplacement de la bordure bleu(voir avec TD)*/
+    margin: 0;
+}
+/*PERSONALISATION DES LIENS NAV*/
+li a[href="#heberg"], li a[href="#acti"]{
+    color: #9c9c9c;
+    font-size: 20px;
 }
 #nav_links
 {
@@ -103,11 +149,23 @@ padding-bottom: 20px;
     padding: 0;
 }
 /*FORMULAIRE*/
-#form_search
+#form_search/*contenaire du formulaire*/
 {
     display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
+    align-items: center;
+    /*longueur du contenaire*/
+    width: 100%;
+    min-width: 291px;
+    max-width: fit-content;
+    /*Marge inf*/
+    margin-bottom: 2%;
+}
+/*Suprresion de l'apparence du bouton*/
+#rech, input[type="search"], #localisation{
+    border-style: none;
 }
 #localisation, #txt, #rech, input[type="search"], input[type="submit"]{
     display: flex;
@@ -115,8 +173,10 @@ padding-bottom: 20px;
     align-items: center;
     margin: 0;
     padding: 0;
-    height: 68px;
+    min-height: 35px;
+    max-height: 46px;
 }
+/*BOUTON LOCALISATION*/
 #localisation{
     width: 71px;
     border-bottom-left-radius: 15px;
@@ -125,35 +185,47 @@ padding-bottom: 20px;
     border-top-right-radius: 0;
     background-color: #f2f2f2;
 }
+/*TAILLE DES ICONES*/
 #localisation i{
     font-size: 20px;
 }
+/*CHANGEMENT DU CURSEUR AU SURVOL*/
 #localisation:hover, input[type="submit"]:hover, button:hover{
     cursor: pointer;
 }
+/*BOUTON SAISIE/AFFICHAGE LOCALITE*/
 input[type="search"]{
-    border-style: none;
-    border-bottom: 2px solid #f2f2f2;
+    /*Mise en place d'une nouvelle bordure*/
     border-top: 2px solid #f2f2f2;
-    width: 312px;
+    border-bottom: 2px solid #f2f2f2;
+    /*Taille de l'élement*/
+    width: 100%;
+    min-width: 162px;
+    /*Mise en gras du texte*/
     font-weight: bold;
-    padding-left: 30px;
-    font-size: 16px;
+    /*Décalage vers la gauche du texte affiché*/
+    padding-left: 15%;
     /* Une transition pour le changement d'icone */
     transition: all .3s ease;
+    /*Ajustement de la police*/
+    font-size-adjust: inherit
 }
-.loupe_mobile{
+/*OCCULTATION DE LA LOUPE*/
+#loupe_mobile{
     display: none;
 }
-input[type="submit"]/* cible le champ input type envoi*/{
+/*BOUTON RECHERCHER*/
+input[type="submit"]/* cible le champ input type envoi*/
+{
     border: 2px solid #0063f6;
     background-color: #0063f6;/*couleur identique à la box #rech*/
-    width: 179px;
+    width: 100%;
+    min-width: 93px;
     border-top-right-radius: 15px;/*arrondi sup droit*/
     border-bottom-right-radius: 15px;/*arrondi inf droit*/
     font-weight: bold;
     color: #ffffff;
-    font-size: 16px;
+    font-size-adjust: inherit;
 }
 /*FILTRES*/
 #ul_filtres, #ul_info
@@ -184,10 +256,7 @@ button{
 #filtres{
     font-weight: bold;
     padding-right: 20px;
-    font-size: 14px;
-}
-.loupe{
-    display: none;
+    font-size: 18px;
 }
 #ul_filtres li{
     padding-right: 10px;
@@ -205,20 +274,12 @@ button
     width: fit-content;
     height: fit-content;
 }
-/*aggrandissement icone non fopnctionnel voir avec TD*/
-/*.fa-solid{
-    width: 25px;
-    height: 25px;
-    height: fit-content;*/
-    /*Trouvé font awesome> font size ^_^*/
-  
-}
 #logo_info
 {
     margin-right: 10px;
     color: #0063f6;
 }
-#ul_filtres i, #ul_info i
+#ul_filtres i
 {
     border-radius: 50%;
     height: 50px;
@@ -236,10 +297,14 @@ button
     justify-content: center;
     align-items: center;
     border: 1pt solid #e7e7e7;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
 }
 #section_form{
     display: flex;
     flex-wrap: nowrap;
+    justify-content: flex-start;
     flex-direction: column;
     width: 100%;
 }
@@ -250,6 +315,9 @@ button
 /*MAIN ET SECTIONS*/
 main{
     padding-left: 20px;
+    width: 100%;
+    min-width: 992px;
+    max-width: fit-content;
 }
 /*BOX MAIN (HEBERG+ASIDE)*/
 #main_page{
@@ -258,30 +326,32 @@ main{
     flex-wrap: nowrap;
     flex-direction: row;
     width: 100%;
-    height: fit-content;
+}
+#main_page, #section_heberg, #section_aside{
+    min-height: 430px;
+    max-height: 1886px;
+}
+#section_heberg, #section_aside{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ececec;
+    border-radius: 20px;
+    width: 100%;
 }
 /*HEBERG*/
 #section_heberg{
-    display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
     flex-direction: row;
-    width: 1170px;
-    height: 833px;
-    background-color: #ececec;
-    border-radius: 20px;
+    min-width: 605px;
+    max-width: max-content;
 }
 /*ASIDE*/
 #section_aside{
-    display: flex;
     justify-content: flex-start;
-    flex-wrap: wrap;
     flex-direction: column;
-    width: 560px;
-    height: 833px;
-    background-color: #ececec;
-    border-radius: 20px;
-    margin-left: 60px;
+    min-width: 290px;
+    max-width: 30vw;
+    margin-left: 5vw;
 }
 /*ACTIVITES*/
 #section_acti{
@@ -318,8 +388,8 @@ main{
     flex-direction: column;
     align-items: center;
     align-content: center;
-    width: 330px;
-    height: 265px;
+    width: 230px;
+    height: 198px;
     background-color: #ffffff;
     padding-top: 3px;
     padding-bottom: 3px;
@@ -327,21 +397,36 @@ main{
     margin-left: 2px;
     margin-right: 2px;
     box-shadow: 2px 2px 4px #e7e7e7;
+    /*Transition d'une seconde sur transformation*/
+    transition: transform .3s ease-in-out;
 }
+.ul_cards:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); /*Transformation_augmentation de la teille prédéfini d'1.5*/
+    /*Marge droite et gauche pour ne pas gener la vue des autres cartes
+    margin-left: 15px;
+    margin-right: 15px;a supprimer?*/
+    box-shadow: 4px 4px 3px #e7e7e7;
+    }
 .ul_cards a:link{
     text-decoration: none;
 }
 .star_quality{
     color: #0266fb;
 }
-
-.img_cards_heberg{
-    width: 320px;
-    height: 150px;
+.img_l_cards_heberg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    width: 220px;
+    height: 110px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    align-items: center;
-    vertical-align: top;
+}
+.img_m_cards_heberg, .img_s_cards_heberg{
+    display: none;
 }
 .text_card p, div, h3, h5{
     margin: 3px;
@@ -388,6 +473,15 @@ main{
     background-color: #ffffff;
     box-shadow: 2px 2px 4px #e7e7e7;
     border-radius: 20px;
+    /*Transition d'une seconde sur transformation*/
+    transition: transform .3s ease-in-out;
+    
+}
+.ul_cards_aside:hover{
+    box-shadow: 4px 4px 3px #e7e7e7;
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); /*Transformation_augmentation de la teille prédéfini d'1.5*/
 }
 .text_card_aside{
     display: flex;
@@ -481,6 +575,9 @@ main{
     margin: 0;
     padding: 2px;
 }
+.article_cards_HS:hover, .article_cards_LS:hover, .article_cards_HLS:hover{
+    box-shadow: 2px 2px 4px #0266fb;
+}
 /*Margin de 30px pour l'esapce entre les cartes petites et moyennes
 .margin_10{
     margin-bottom: 30px;
@@ -527,3 +624,16 @@ footer{
     padding-top: 10px;
     padding-bottom: 5px;
 }
+.ul_footer a:hover{ 
+    animation: pulse 1s infinite; /*animation défini sur puls pendant 1s(rapide) de façon continu*/
+    animation-timing-function: linear; /*vitesse constante de l'animation*/
+    font-weight: bold;
+    width: fit-content; /*fit-content sur la longueur pour centrer l'effet pulsation*/ 
+  }
+  /*étapes de la "pulsation"*/
+  @keyframes pulse {
+    0% { transform: scale(1); } /*0% état originel*/
+    50% { transform: scale(1.1);/*50% état Zoom*/
+    100% { transform: scale(1); }/*100% on retourne à l'état originel*/
+    }
+  }  
