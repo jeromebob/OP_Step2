@@ -541,16 +541,6 @@ main{
     margin-top: 50px;
     padding: 0;
 }
-.cards_acti_HS{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 408px;
-    margin: 0;
-    padding: 0;
-}
 /*Personnalisation des images cartes hautes*/
 .article_cards_HS img, .article_cards_LS img, .article_cards_HLS img{
     display: flex;
@@ -589,10 +579,6 @@ main{
 .article_cards_HS:hover, .article_cards_LS:hover, .article_cards_HLS:hover{
     box-shadow: 2px 2px 4px #0266fb;
 }
-/*Margin de 30px pour l'esapce entre les cartes petites et moyennes
-.margin_10{
-    margin-bottom: 30px;
-}*/
 /*Hauteur et longueur des cartes Activités*/
 .article_cards_HLS, .article_cards_HS, .article_cards_LS{
     height: fit-content;

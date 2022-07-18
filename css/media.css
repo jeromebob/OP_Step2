@@ -302,12 +302,14 @@
         width: 100%;
         min-height: fit-content;
     }
-    #li_acti{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: -45px;
-        margin-top: -25px;
+    .ul_cards_aside{
+        width: 347px;
+        max-width: 653px;
+        min-height: fit-content;
+    }
+    .ul_cards_aside:hover{
+        box-shadow: none;
+        transform: none;
     }
     .img_cards_L_aside, .img_cards_M_aside{
         display: none;
@@ -322,14 +324,10 @@
         border-bottom-left-radius: 20px;
         border-top-left-radius: 20px;
     }
-    .ul_cards_aside{
-        width: 347px;
-        max-width: 653px;
-        min-height: fit-content;
-    }
-    .ul_cards_aside:hover{
-        box-shadow: none;
-        transform: none;
+    .text_cards_aside{
+        margin-top: 6px;
+        margin-bottom: 9px;
+        margin-left: 7px;
     }
         /*Activités*/
     #section_acti{
@@ -341,6 +339,14 @@
         width: 100%;
         height: fit-content;
         margin-top: 300px;
+        margin-bottom: -80px;
+    }
+    #li_acti{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: -45px;
+        margin-top: -25px;
     }
     .acti{
         flex-wrap: nowrap;
@@ -357,14 +363,9 @@
         box-shadow: 2px 2px 4px black;
         margin-bottom: 15px;
     }
-    .img_cards_acti_mobile{
+    .article_cards_HLS img, .article_cards_LS img, .article_cards_HS img{
         width: 360px;
         height: 150px;
-    }
-    .text_cards_aside{
-        margin-top: 6px;
-        margin-bottom: 9px;
-        margin-left: 7px;
     }
     /*FOOTER*/
     footer, #acti{
