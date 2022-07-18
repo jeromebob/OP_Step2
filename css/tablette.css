@@ -1,0 +1,24 @@
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    body, #contenaire{
+        width: 100%;
+        min-width: 768px;
+        max-width: 992px;
+    }
+    #contenaire
+    {
+        justify-content: flex-start;
+        min-width: 768px;
+        max-width: 992px;
+    }
+    #box_nav
+    {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        min-width: 230px;
+        max-width: fit-content;
+    }
+}
