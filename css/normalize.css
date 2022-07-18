@@ -158,10 +158,22 @@ li a[href="#heberg"], li a[href="#acti"]{
     align-items: center;
     /*longueur du contenaire*/
     width: 100%;
-    min-width: 291px;
+    min-width: fit-content;
     max-width: fit-content;
+    /*Hauteur contenaire*/
+    height: 100%;
+    min-height: 50px;
+    max-height: fit-content;
     /*Marge inf*/
     margin-bottom: 2%;
+    margin-right: 0;
+}
+#section_form{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
 }
 /*Suprresion de l'apparence du bouton*/
 #rech, input[type="search"], #localisation{
@@ -173,8 +185,9 @@ li a[href="#heberg"], li a[href="#acti"]{
     align-items: center;
     margin: 0;
     padding: 0;
-    min-height: 35px;
-    max-height: 46px;
+    height: 100%;
+    min-height: 50px;
+    max-height: 100px;
 }
 /*BOUTON LOCALISATION*/
 #localisation{
@@ -263,6 +276,11 @@ button{
     width: fit-content;
     height: fit-content;
 }
+
+#section_form, #present, #style_form, #ul_filtres, #ul_info{
+    margin-bottom: 10px;
+    padding: 0;
+}
 button
 {
     border-radius: 40px;
@@ -301,17 +319,6 @@ button
     width: 25px;
     height: 25px;
 }
-#section_form{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    flex-direction: column;
-    width: 100%;
-}
-#section_form, #present, #style_form, #ul_filtres, #ul_info{
-    margin-bottom: 10px;
-    padding: 0;
-}
 /*MAIN ET SECTIONS*/
 main{
     padding-left: 20px;
@@ -331,31 +338,32 @@ main{
     min-height: 430px;
     max-height: 1886px;
 }
-/*Propriétés communes heberg/aside*/
+/*Proporiétés communes Heberg+Aside*/
 #section_heberg, #section_aside{
     display: flex;
-    flex-wrap: wrap;
-    background-color: #ececec;
-    border-radius: 20px;
     width: 100%;
+    background-color: #ececec;
 }
 /*HEBERG*/
 #section_heberg{
+    flex-wrap: wrap;
+    border-radius: 20px;
     justify-content: space-evenly;
     flex-direction: row;
-    min-width: 605px;
+    width: 100%;
+    min-width: 60vw;
     max-width: max-content;
 }
 /*ASIDE*/
 #section_aside{
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: nowrap;
-    min-width: 290px;
-    max-width: 40vw;
-    margin-left: 5vw;
+    min-width: 35vw;
+    margin-left: 3vw;
+    border-radius: 20px;
+    margin-right: 2px;
 }
 /*ACTIVITES*/
 #section_acti{
@@ -453,7 +461,10 @@ main{
     background-color: #ececec;
     border-radius: 20px;
 }
-.img_cards_aside{
+.img_cards_M_aside, .img_cards_S_aside{
+    display: none;
+}
+.img_cards_L_aside{
     display: flex;
     justify-content: center;
     align-items: center;

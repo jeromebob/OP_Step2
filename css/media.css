@@ -88,14 +88,19 @@
     #main_page, #contenaire_section, #section_aside, 
     #style_form, #ul_info, #present, #section_form{
         width: 100%;
-        min-width: 320px;
+        min-width: 400px;
         max-width: 768px;
     }
     #section_form{
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+        margin-top: -140px;
+        margin-left: 10px;
         height: 100%;
         min-height: 1000px;
         max-height: fit-content;
-        margin-bottom: 20px;
+        margin-bottom: 80px;
     }
     #present{
         display: flex;
@@ -109,7 +114,7 @@
     #contenaire_section{
         margin-top: -80px;
     }
-    #contenaire_section, #section_form{
+    #contenaire_section{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -117,24 +122,12 @@
         align-items: center;
         padding: 0;
     }
-    #section_form{
-        margin-top: -80px;
-    }
     #style_form, #ul_info, #present{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-    }
-    #section_form{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 360px;
-        margin-top: -80px;
-        margin-left: 25px;
     }
     #form_search{
         margin-left: 0;
@@ -166,6 +159,8 @@
         width: 100%;
         min-width: 43px;
         max-width: 103px;
+    }
+    #localisation, input[type="search"], #loupe_mobile{
         height: 100%;
         min-height: 68px;
         max-height: 103px;
@@ -213,7 +208,6 @@
         justify-content: flex-start;
         flex-wrap: nowrap;
         width: 100%;
-        margin-bottom: 100px;
     }
     /*MAIN PAGE (HEBERG+ASIDE)*/
     #main_page{
@@ -222,6 +216,8 @@
         flex-direction: column-reverse;
         width: 100%;
         min-height: fit-content;
+        justify-content: center;
+        align-items: center;
     }
     /*SECTION HEBERGEMENTS*/
     #section_heberg
@@ -310,20 +306,26 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 90px;
+        margin-bottom: -45px;
         margin-top: -25px;
     }
-    .img_cards_aside{
+    .img_cards_L_aside{
+        display: none;
+    }
+    .img_cards_S_aside{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 171px;
+        height: 179px;
+        object-fit: cover;
         border-bottom-left-radius: 20px;
         border-top-left-radius: 20px;
-        object-fit: cover;
     }
     .ul_cards_aside{
-        width: 350px;
-        max-width: 653px;
-        min-height: fit-content;
-        /* max-height: 311px; */
-        margin-right: 20px;
+            width: 385px;
+            max-width: 653px;
+            min-height: fit-content;
     }
         .ul_cards_aside:hover{
             box-shadow: none;
@@ -338,6 +340,7 @@
             flex-wrap: nowrap;
             width: 100%;
             height: fit-content;
+            margin-top: 300px;
         }
         .acti{
             flex-wrap: nowrap;
@@ -366,6 +369,7 @@
             flex-direction: column;
             flex-wrap: nowrap;
             width: 100%;
+            min-width: 400px;
             height: fit-content;
         }
         #ul_footer{
