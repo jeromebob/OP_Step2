@@ -1,53 +1,55 @@
 <!DOCTYPE html>
-<html lang="FR">
-    <body>
-        <head>
-            <!--CODAGE DE CARACTERES-->
-            <meta charset="utf-8"> <!--CODAGE UNIVERSEL_ISO/CEI 10646-->
-            <!--BANQUE D'ICONES-->
-            <script src="https://kit.fontawesome.com/e82669452c.js" crossorigin="anonymous"></script>
-            <!--POLICE_RALEWAY-->
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"> 
-            <!--CSS-->
-            <link rel="stylesheet" href="css/normalize.css">
-            <link rel="stylesheet" href="css/media.css">
-            <!--viewport-->
-            <meta name="viewport" content="width=device-width, user-scalable=no">
-        </head>
-        <!--HEADER-->
-        <header>
-            <div id="contenaire">
-                <div id="box_logo">
-                    <img src="images/logo/Booki@3x.png" alt="logo_du_site" id="logo">
-                </div>
-                <nav id="box_nav">
-                    <ul  id="nav_links">
-                        <li><div  id="heberg_li"><a href="#heberg">Hébergements</a></div></li>
-                        <!--lien vers l'élement vers l'id heberg de la page-->
-                        <li><div id="acti_li"><a href="#acti">Activités</a></div></li>
-                        <!--lien vers l'élement vers l'id acti de la page-->
-                    </ul>
-                </nav>
+<HTML LANG="fr">
+<HEAD>
+    <META CHARSET="UTF-8">
+    <TITLE>Booki.com</TITLE>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/tablette.css">
+    <!--POLICE_RALEWAY-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"> 
+    <!--viewport-->
+    <meta name="viewport" content="width=device-width, scalable=1">
+    <!--BANQUE D'ICONES-->
+    <script src="https://kit.fontawesome.com/e82669452c.js" crossorigin="anonymous"></script>
+</HEAD>
+<body>
+<!--HEADER-->
+    <header>
+        <div id="contenaire">
+            <div id="box_logo">
+                <img src="images/logo/Booki@3x.png" alt="logo_du_site" id="logo">
             </div>
-        </header>
-        <!--MAIN-->
-        <!--PREMIERE SECTION DE PAGE-->
-        <main id="contenaire_section">
-            <section id="section_form">
-                <ul id="present">
-                    <li><h1>Trouvez votre hébergement pour des vacances de rêves</h1></li>
-                    <li><p>En plein centre ville ou en pleine nature</p></li>
+            <nav id="box_nav">
+                <ul  id="nav_links">
+                    <li><div  id="heberg_li"><a href="#heberg">Hébergements</a></div></li>
+                    <!--lien vers l'élement vers l'id heberg de la page-->
+                    <li><div id="acti_li"><a href="#acti">Activités</a></div></li>
+                    <!--lien vers l'élement vers l'id acti de la page-->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--MAIN-->
+    <!--PREMIERE SECTION DE PAGE-->
+    <main id="contenaire_section">
+        <section id="section_form">
+            <ul id="present">
+                <li><h1>Trouvez votre hébergement pour des vacances de rêves</h1></li>
+                <li><p>En plein centre ville ou en pleine nature</p></li>
                 <li>
-                    <form action="" method="get" id="form_search">
-                        <button id="localisation"><i class="fa-solid fa-location-dot"></i></button>
-                        <div id="txt"><input type="search" value="Marseille, France" required></div>
-                        <button id="rech"><input type="submit" value="Rechercher"></button>
-                        <button type="submit" id="loupe_mobile"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <form action="http://www.booki.com/" method="get" id="form_search">
+                        <div role="button" id="localisation"><i class="fa-solid fa-location-dot"></i></div>
+                        <input type="search" value="Marseille, France" required id="txt">
+                        <input type="submit" value="Rechercher" id="rech">
+                        <div role="button" id="loupe_mobile"><i class="fa-solid fa-magnifying-glass"></i></div>
                     </form>
                 </li>
-                <ul id="ul_filtres">
+            </ul>
+            <ul id="ul_filtres">
                     <li id="filtres"><p>Filtres</p></li>
                     <li><button class="button_filtres"><i  class="fa-solid fa-money-bill-wave"></i><span class="textes_button">Economique</span></button></li>
                     <li><button class="button_filtres"><i  class="fa-solid fa-child-reaching"></i><span class="textes_button">Familial</span></button></li>
@@ -56,7 +58,7 @@
                 </ul>
                 <ul id="ul_info">
                     <li id="logo_info"><i class="fa-solid fa-info"></i></li>
-                    <li><p>Plus de 500 logements sont disponibles </br> dans cette ville</p></li>
+                    <li><p>Plus de 500 logements sont disponibles <br> dans cette ville</p></li>
                 </ul>
             </section>
             <!--DEUXIEME SECTION DE PAGE-->
@@ -303,9 +305,9 @@
                     </li>
                 </ul>
                 <ul id="acti">
-                    <li class="cards_acti_HS link_acti">
+                    <li class="cards_acti_HS link_acti acticards_mobile margin_1">
                         <a href="#ac">
-                            <article  class="article_cards_HS acticards_mobile"><!--CARD "Vieux Port de Marseille"-->
+                            <article  class="article_cards_HS"><!--CARD "Vieux Port de Marseille"-->
                                     <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port de Marseille" class="img_cards_acti_HS img_cards_acti_mobile">
                                     <div  class="text_card_acti">
                                         <h3>Vieux Port</h3>
@@ -313,9 +315,9 @@
                             </article>
                         </a>
                     </li>
-                    <li class="cards_acti_LS link_acti acticards_mobile">
+                    <li class="cards_acti_LS link_acti acticards_mobile margin_2">
                         <a href="#ac">
-                            <article  class="article_cards_LS margin_10"><!--CARD "Fort de pomègues"-->
+                            <article  class="article_cards_LS"><!--CARD "Fort de pomègues"-->
                                     <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de pomègues" class="img_cards_acti_LS">
                                     <div  class="text_card_acti">
                                         <h3>Fort de pomègues</h3>
@@ -323,7 +325,7 @@
                             </article>
                         </a>
                     </li>
-                    <li  class="cards_acti_LS link_acti acticards_mobile">
+                    <li  class="cards_acti_LS link_acti acticards_mobile margin_2">
                         <a href="#ac">
                             <article  class="article_cards_HLS"><!--CARD "iles du Frioul"-->
                                     <img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="iles du Frioul" class="img_cards_acti_LS">
@@ -333,7 +335,7 @@
                             </article>
                         </a>
                     </li>
-                    <li class="cards_acti_HS link_acti acticards_mobile">
+                    <li class="cards_acti_HS link_acti acticards_mobile margin_3">
                         <a href="#ac">
                             <article  class="article_cards_HS"><!--CARD "Parc National des Calanques"-->
                                     <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques" class="img_cards_acti_HS">
@@ -343,7 +345,7 @@
                             </article>
                         </a>
                     </li>
-                    <li class="cards_acti_LS link_acti acticards_mobile">
+                    <li class="cards_acti_LS link_acti acticards_mobile margin_4">
                         <a href="#ac">
                             <article  class="article_cards_HLS margin_10"><!--CARD "Notre Dame de la Garde"-->
                                     <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Notre Dame de la Garde" class="img_cards_acti_LS">
@@ -353,7 +355,7 @@
                             </article>
                         </a>
                     </li>
-                    <li class="cards_acti_LS link_acti acticards_mobile">
+                    <li class="cards_acti_LS link_acti acticards_mobile  margin_4">
                         <a href="#ac">
                             <article  class="article_cards_LS"><!--CARD "Parc Longchamp"-->
                                     <img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp" class="img_cards_acti_LS">

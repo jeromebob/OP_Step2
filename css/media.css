@@ -337,6 +337,8 @@
         flex-direction: column;
         flex-wrap: nowrap;
         width: 100%;
+        min-width: 992px;
+        max-width: fit-content;
         height: fit-content;
         margin-top: 300px;
         margin-bottom: -80px;

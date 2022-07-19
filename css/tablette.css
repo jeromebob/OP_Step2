@@ -6,14 +6,13 @@
     }
     #contenaire
     {
-        justify-content: flex-start;
         min-width: 768px;
         max-width: 992px;
     }
     #box_nav
     {
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -21,4 +20,88 @@
         min-width: 230px;
         max-width: fit-content;
     }
+    /*CONTENAIRE SECTION*/
+    #contenaire_section{
+        padding-left: 0;
+    }
+    /*FORMULAIRE*/
+    #section_form{
+        padding-left: 5px;
+    }
+    /*HEBERGEMENTS*/
+    #section_heberg{
+        border-radius: 20px;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        margin-left: -5px;
+    }
+    /*ASIDE*/
+    #section_aside{
+        align-items: flex-start;
+    }
+    .img_cards_L_aside{
+        display: none;
+    }
+    .ul_cards_aside{
+        height: 169px;
+    }
+    .img_cards_M_aside{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 140px;
+        height: 160px;
+        object-fit: cover;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+    /*ACTIVITES*/
+    #section_acti{
+        justify-content: space-between;
+    }
+    .article_cards_HLS img, .article_cards_LS img, .article_cards_HS img{
+        width: 360px;
+        height: 150px;
+    }
+    .article_cards_HLS, .article_cards_LS, .article_cards_HS{
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    #acti{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        width: 979px;
+        margin-bottom: 44px;
+        margin-top: 6px;
+        padding: 0;
+    }
+    #margin_10_R{
+        margin-right: 10px;
+    }
+    #li_acti{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        min-width: 768px;
+        max-width: 992px;
+    }
+    footer{
+        margin-top: 20px;
+    }
+    .ul_footer a:hover{
+        animation: pulse 1s infinite; /*animation défini sur puls pendant 1s(rapide) de façon continu*/
+        animation-timing-function: linear; /*vitesse constante de l'animation*/
+    }
+      /*étapes de la "pulsation"*/
+    @keyframes pulse {
+        0% { transform: scale(1); } /*0% état originel*/
+        50% { transform: scale(1.1);}/*50% état Zoom*/
+        100% { transform: scale(1); }/*100% on retourne à l'état originel*/
+    }
+
 }

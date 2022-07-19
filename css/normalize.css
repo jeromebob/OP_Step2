@@ -87,16 +87,6 @@ h1 {
     /*Transition longue avec l'effet ease-in-out (accèlere puis ralentit)*/
     transition: all .30000s ease-in-out;
 }
-#logo:hover{/*pour le fun: a supprimer*/
-    transform: rotate(360deg); /*Rotation 360°*/
-    background-color: #e7e7e7;
-    /*Border radius 50% avec proportions non égales donc elipse ^_^*/
-    border-radius: 50%;
-    box-shadow: 2px 2px 4px #0266fb;
-    /*Marge sup et G*/
-    margin-top: 10px;
-    margin-left: 10px;
-}
 #box_nav
 {
     display: flex;
@@ -408,16 +398,8 @@ main{
     margin-left: 2px;
     margin-right: 2px;
     box-shadow: 2px 2px 4px #e7e7e7;
-    /*Transition d'une seconde sur transformation*/
-    transition: transform .3s ease-in-out;
 }
 .ul_cards:hover{
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
-    transform: scale(1.5); /*Transformation_augmentation de la teille prédéfini d'1.5*/
-    /*Marge droite et gauche pour ne pas gener la vue des autres cartes
-    margin-left: 15px;
-    margin-right: 15px;a supprimer?*/
     box-shadow: 4px 4px 3px #e7e7e7;
     }
 .ul_cards a:link{
@@ -484,15 +466,10 @@ main{
     background-color: #ffffff;
     box-shadow: 2px 2px 4px #e7e7e7;
     border-radius: 20px;
-    /*Transition d'une seconde sur transformation*/
-    transition: transform .3s ease-in-out;
     
 }
 .ul_cards_aside:hover{
     box-shadow: 4px 4px 3px #e7e7e7;
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
-    transform: scale(1.5); /*Transformation_augmentation de la teille prédéfini d'1.5*/
 }
 .text_card_aside{
     display: flex;
@@ -535,13 +512,15 @@ main{
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    width: 1820px;
+    width: 1678px;
     height: 565px;
     margin-bottom: 100px;
     margin-top: 50px;
     padding: 0;
+    margin-left: -25px;
 }
 /*Personnalisation des images cartes hautes*/
+
 .article_cards_HS img, .article_cards_LS img, .article_cards_HLS img{
     display: flex;
     justify-content: center;
@@ -553,7 +532,7 @@ main{
     object-fit: cover;
 }
 .article_cards_HLS img, .article_cards_LS img, .article_cards_HS img{
-    width: 400px;
+    width: 340px;;
 }
 .article_cards_HLS img{
     height: 146px;
@@ -623,15 +602,6 @@ footer{
     padding-bottom: 5px;
 }
 .ul_footer a:hover{ 
-    animation: pulse 1s infinite; /*animation défini sur puls pendant 1s(rapide) de façon continu*/
-    animation-timing-function: linear; /*vitesse constante de l'animation*/
     font-weight: bold;
     width: fit-content; /*fit-content sur la longueur pour centrer l'effet pulsation*/ 
-  }
-  /*étapes de la "pulsation"*/
-  @keyframes pulse {
-    0% { transform: scale(1); } /*0% état originel*/
-    50% { transform: scale(1.1);/*50% état Zoom*/
-    100% { transform: scale(1); }/*100% on retourne à l'état originel*/
-    }
-  }  
+} 
