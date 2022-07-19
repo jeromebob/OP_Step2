@@ -522,6 +522,9 @@ main{
     padding: 0;
     margin-left: -25px;
 }
+#ul_li_acti, #li_acti{
+    margin: 0;
+}
 /*Personnalisation des images cartes hautes*/
 
 .article_cards_HS img, .article_cards_LS img, .article_cards_HLS img{
