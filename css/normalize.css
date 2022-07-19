@@ -512,7 +512,9 @@ main{
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    width: 1678px;
+    width: 100%;
+    min-width: 992px;
+    max-width: fit-content;
     height: 565px;
     margin-bottom: 100px;
     margin-top: 50px;
@@ -531,8 +533,11 @@ main{
     padding: 0;
     object-fit: cover;
 }
-.article_cards_HLS img, .article_cards_LS img, .article_cards_HS img{
-    width: 340px;;
+.article_cards_HLS img, .article_cards_LS img{
+    width: 300px;;
+}
+.article_cards_HS img{
+    width: 340px;
 }
 .article_cards_HLS img{
     height: 146px;
@@ -542,6 +547,22 @@ main{
 }
 .article_cards_HS img{
     height: 517px;
+}
+.margin_1{
+    margin-left: 15px;
+    margin-right: 5px;
+}
+.margin_2{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.margin_3{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.margin_4{
+    margin-left: 5px;
+    margin-right: 10px;
 }
 .article_cards_HS, .article_cards_LS, .article_cards_HLS{
     display: flex;
