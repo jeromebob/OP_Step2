@@ -174,14 +174,15 @@ li a[href="#heberg"], li a[href="#acti"]{
     justify-content: center;
     align-items: center;
     margin: 0;
-    padding: 0;
     height: 100%;
     min-height: 50px;
     max-height: 100px;
 }
 /*BOUTON LOCALISATION*/
 #localisation{
-    width: 71px;
+    width: 100%;
+    min-width: 60px;
+    max-width: 80px;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 0;
@@ -203,15 +204,15 @@ input[type="search"]{
     border-bottom: 2px solid #f2f2f2;
     /*Taille de l'élement*/
     width: 100%;
-    min-width: 162px;
+    min-width: 180px;
     /*Mise en gras du texte*/
     font-weight: bold;
     /*Décalage vers la gauche du texte affiché*/
-    padding-left: 15%;
+    padding-left: 15px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     /* Une transition pour le changement d'icone */
     transition: all .3s ease;
-    /*Ajustement de la police*/
-    font-size-adjust: inherit
 }
 /*OCCULTATION DE LA LOUPE*/
 #loupe_mobile{

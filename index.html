@@ -4,9 +4,9 @@
     <META CHARSET="UTF-8">
     <TITLE>Booki.com</TITLE>
     <!--CSS-->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/media.css">
-    <link rel="stylesheet" href="css/tablette.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <link rel="stylesheet" type="text/css" href="css/tablette.css">
     <!--POLICE_RALEWAY-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,11 +41,11 @@
                 <li><h1>Trouvez votre hébergement pour des vacances de rêves</h1></li>
                 <li><p>En plein centre ville ou en pleine nature</p></li>
                 <li>
-                    <form action="http://www.booki.com/" method="get" id="form_search">
-                        <div role="button" id="localisation"><i class="fa-solid fa-location-dot"></i></div>
+                    <form action="booki" method="get" id="form_search">
+                        <button id="localisation"><i class="fa-solid fa-location-dot"></i></button>
                         <input type="search" value="Marseille, France" required id="txt">
                         <input type="submit" value="Rechercher" id="rech">
-                        <div role="button" id="loupe_mobile"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <button role="button" id="loupe_mobile"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </li>
             </ul>
